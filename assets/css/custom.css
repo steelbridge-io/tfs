@@ -51,7 +51,6 @@ Custom styles for The Fly Shop Theme
   --default-darkbg: #2b343d;
   --btn-color: #000000;
   --event-details: #6b6b6b;
-  --font-dark: #3b3b42;
   --polls-nav: #000000;
   --white: #ffffff;
   --dark-white: #f5f5f5;
@@ -81,7 +80,7 @@ Custom styles for The Fly Shop Theme
   background-size: 150% auto;
   background-repeat: no-repeat;
   background-position: center center;
-  background-image: url(http://upload.wikimedia.org/wikipedia/commons/b/bc/Rosegarden_ubc.jpg);
+  /*background-image: url(http://upload.wikimedia.org/wikipedia/commons/b/bc/Rosegarden_ubc.jpg);*/
 }
 
 .w-angle-att-img img {

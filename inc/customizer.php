@@ -19,9 +19,9 @@
 	include 'customizer-css/signature-events-css.php';
 	include 'customizer-css/basic-css.php';
 	include 'customizer-css/travel-css.php';
-    include 'customizer-css/default-css.php';
-    include 'customizer-css/archive-css.php';
-    include 'customizer-css/holiday-css.php';
+	include 'customizer-css/default-css.php';
+	include 'customizer-css/archive-css.php';
+	include 'customizer-css/holiday-css.php';
 
 /**
  * Add postMessage support for site title and description for the Theme Customizer.
@@ -30,7 +30,7 @@
  */
 
 function the_fly_shop_customize_register( $wp_customize ) {
-	
+
 /**
  * The following include external files containing additional settings and controls for specific templates.
  */
@@ -91,9 +91,9 @@ function the_fly_shop_customize_register( $wp_customize ) {
 		)
 	);
 	
-			
+	
 /*
- * Sanitize 
+ * Sanitize
  */
 	 function sanitize_checkbox( $input ) {
 		return ( 1 === absint( $input ) ) ? 1 : 0;

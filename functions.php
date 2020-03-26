@@ -14,6 +14,7 @@ include_once 'inc/nav/pagination.php'; // Adds custom pagination for pages/posts
 include_once 'inc/gutenberg.php';
 include_once 'inc/author.php';
 include_once 'inc/author-img/custom-author-image.php';
+include_once 'inc/blog/blog-template-css.php';
 
 
 if ( ! function_exists( 'the_fly_shop_setup' ) ) :
@@ -182,6 +183,7 @@ function the_fly_shop_scripts() {
     wp_add_inline_style( 'the-fly-shop-custom-style', load_archive_css());
     wp_add_inline_style( 'the-fly-shop-custom-style', load_holiday_template_css());
     wp_add_inline_style( 'the-fly-shop-custom-style', load_tfs_custom_fields_css());
+    wp_add_inline_style( 'the-fly-shop-custom-style', blog_css());
 
     //wp_enqueue_style( 'the-fly-shop-main-style', get_template_directory_uri() . '/assets/css/main.css', array(),
     // '20161116', 'all' );
