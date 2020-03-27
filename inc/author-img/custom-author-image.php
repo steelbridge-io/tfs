@@ -4,9 +4,10 @@
 // Enqueue scripts for back-end use
 function tfs_cust_auth_image() {
 
-    wp_register_script( 'easy-author-image-uploader', get_template_directory_uri() . '/inc/author-img/js/easy-author-image-uploader.js', __FILE__ , array(
-            'jquery',
-        'media-upload', 'thickbox' ) );
+   // wp_register_script( 'easy-author-image-uploader', get_template_directory_uri() . '/inc/author-img/js/easy-author-image-uploader.js', __FILE__ , array('jquery',
+   //   'media-upload', 'thickbox') );
+  
+    wp_register_script( 'easy-author-image-uploader', get_template_directory_uri() . '/inc/author-img/js/easy-author-image-uploader.js', __FILE__ , array() );
 
     // If we are currently viewing the profile field, enqueue our custom js file
     if ( 'profile' == get_current_screen() -> id || 'user-edit' == get_current_screen() ->id ) {
@@ -172,12 +173,12 @@ function get_easy_author_image($avatar, $id_or_email, $size, $default='', $alt='
         if($avatar_user && $url){
 
 
-            $myavatar = '<img class="avatar avatar-'.$size.' photo" width="120" height="120" src="'.$url.'"/>';
+            $myavatar = '<img class="avatar avatar-'.$size.' photo" src="'.$url.'"/>';
 
         } else {
 
             $gravatarUrl = "https://www.gravatar.com/avatar.php?gravatar_id=" . md5($email) . "&size=40";
-            $myavatar = "<img src='$gravatarUrl' height='120' width='120' alt=".$email."' />";
+            $myavatar = "<img src='$gravatarUrl' alt=".$email."' />";
         }
     }else{
         $myavatar = "<img alt='' src='{$default}' class='avatar avatar-{$size} photo avatar-default' height='{$size}' width='{$size}' />";

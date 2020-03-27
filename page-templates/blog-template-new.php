@@ -29,7 +29,7 @@ get_header();
                     <div class="basicpagelogo signature-header template-class text-center">
 
                         <dl class="landing-hd">
-                            <dd class="dd-1"><img src="<?php echo $basic_logo_upload; ?>" class="img-responsive-logo" alt="The Fly Shop Logo" title="Basic Logo"></dd>
+                            <dd class="dd-1"><img src="<?php echo $blog_logo_upload; ?>" class="img-responsive-logo" alt="The Fly Shop Logo" title="Basic Logo"></dd>
 
                             <dd class="dd-2"><h2 class="logo-tel"><?php echo get_the_title(); ?></h2></dd>
 
@@ -116,7 +116,7 @@ get_header();
 
                 </main>
 
-                <div class="col-md-3 col-sm-offset-1">
+                <div class="col-md-4">
                     <?php get_sidebar(); ?>
                 </div>
             </div>
