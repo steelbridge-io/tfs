@@ -11,14 +11,14 @@ function load_signature_css() {
 	$signature_text_color		= get_theme_mod ('signature_text_color');
 	$signature_link_color		= get_theme_mod ('signature_link_color');
 	
-	if (is_page_template('page-templates/signature-template.php')) {
-		$css_signature .= ' 
+	if (is_page_template('page-templates/signature-template.php') || is_page_template('page-templates/signature-template-blog.php')) {
+		$css_signature .= '
 		
 		.signature_bg_color {
 				background: ' . $signature_bg_color . ';
 			}
 			
-		.signature-text-color h3.widget-title a:hover, .signature-text-color h3.widget-title, .signature-text-color h4.widget-title, .signature-text-color p, h2.logo-tel { 
+		.signature-text-color h3.widget-title a:hover, .signature-text-color h3.widget-title, .signature-text-color h4.widget-title, .signature-text-color p, h2.logo-tel {
 			color: ' . $signature_text_color . ';
 		}
 		

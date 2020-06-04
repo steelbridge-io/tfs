@@ -40,7 +40,10 @@ Custom styles for The Fly Shop Theme
   - Survey || Poll
   - Scroll To ID
   - Modal
-	- Media Queries
+  - Templates
+    - Travel Template With Blog
+  - Widgets
+  - Media Queries
 
 */
 
@@ -307,9 +310,11 @@ input.ticket-selector-submit-btn.view-details-btn:hover {
 }
 .archive.panel-body {
   padding: 2em;
+  border-radius: 0;
 }
 .archive.panel.panel-default {
   margin: 2em auto 0;
+  border-radius: 0px;
 }
 .archive-template {
   padding: 1.618em;
@@ -562,6 +567,114 @@ p.template-description {
 
 /* Front Page
 -------------------------------- */
+
+#blog-feed-fp-top {
+
+  h2 {
+    color: var(--white);
+  }
+  h3 {
+    margin-bottom: 0;
+  }
+  p, .media-body {
+    color:var(--white);
+    font: inherit;
+    height: auto;
+    font-size: 100%;
+    line-height: initial;
+    letter-spacing: 0.075em;
+    margin-top: 1rem;
+  }
+  a, a:hover, h3:hover {
+    color: var(--red);
+  }
+  .media-body {
+    color:var(--white);
+    text-align: left;
+  }
+  .media .media-left img {
+    width: 100%;
+    height: 250px;
+    display: block;
+    object-fit: cover;
+  }
+  .newscta {
+    text-align:center;
+    overflow:auto;
+  }
+}
+
+#main {
+  .archive.content-area.row .col-md-4 article {
+    min-height: 670px;
+  }
+  .archive.content-area.row.display-flex {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .row.display-flex > [class*='col-'] {
+    display: flex;
+    flex-direction: column;
+  }
+  .archive-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  .blog-well.well {
+    background-color: var(--tfs-orange);
+    border: none;
+    box-shadow: none;
+    min-height: 500px;
+    .row {
+      margin-bottom: 6rem;
+    }
+    h2 {
+      text-align: center;
+      font-size: 2.168rem;
+    }
+    h3 {
+      color: var(--white);
+    }
+    .inner-wrap a.post-permalink {
+      text-decoration: none;
+    }
+    .inner-wrap a h3 {
+      font-size: 1.5rem;
+      margin: 0 0 0 0;
+    }
+    p {
+      color: var(--white);
+    }
+    img {
+      max-width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+    hr {
+      border-bottom: solid 2px var(--dark-gray);
+      width: 70%;
+      margin: 0 auto 1.618em auto;
+    }
+    .col-md-6 .inner-wrap {
+      background-color: var(--dark-gray);
+      padding: 1em;
+    }
+    .read-more-link, a.read-more-link,
+    article > a.read-more-link {
+      color: var(--red);
+    }
+    .entry-content {
+      font-size: 1.1rem;
+    }
+  }
+  .read-more-link, a.read-more-link,
+  article > a.read-more-link {
+    color: var(--red);
+  }
+}
+
+
 
 
 /* page.php
@@ -1615,7 +1728,88 @@ nav.navigation.post-navigation {
 .survey-sidebar {
   padding-right: 1.618em;
 }
+/* Templates
+------------------------------- */
 
+/*Travel Template With Blog*/
+#travel-feed-fp-top {
+  #news-cta {
+    /*background-color: var(--black);*/
+    padding: 0 0 1.618em 0;
+  }
+  h2, h3 {
+    color: var(--white);
+  }
+  h3 {
+    margin-bottom: 0;
+  }
+  p, .media-body {
+    color:var(--white);
+    font: inherit;
+    height: auto;
+    font-size: 100%;
+    line-height: initial;
+    letter-spacing: 0.075em;
+    margin-top: 1rem;
+  }
+  a, a:hover, h3:hover {
+    color: var(--red);
+  }
+  .media-body {
+    color:var(--white);
+    text-align: left;
+  }
+  .media .media-left img {
+    width: 100%;
+    height: 250px;
+    display: block;
+    object-fit: cover;
+  }
+  .newscta {
+    text-align:center;
+    overflow:auto;
+  }
+}
+/* Widgets
+------------------------------- */
+.outfitters-recent-post {
+  margin-bottom: 1.618em;
+}
+.outfitters-recent-post .post-excerpt .read-more-link {
+  color: var(--red);
+}
+.outfitters-recent-post img {
+  max-width: 100%;
+  height: auto;
+}
+.travel-recent-post {
+  margin-bottom: 1.618em;
+}
+.travels-recent-post .post-excerpt .read-more-link {
+  color: var(--red);
+}
+.travel-recent-post img {
+  max-width: 100%;
+  height: auto;
+}
+.posts-recent-post {
+  margin-bottom: 1.618em;
+}
+.posts-recent-post .post-excerpt .read-more-link {
+  color: var(--red);
+}
+.posts-recent-post img {
+  max-width: 100%;
+  height: auto;
+}
+
+.mx-auto {
+  margin-top: 1.618rem;
+}
+
+[class*='mx-auto']:last-of-type:nth-child(odd) {
+  margin-left: 25%;
+}
 /* Media Queries
 ------------------------------- */
 
@@ -1712,6 +1906,9 @@ nav.navigation.post-navigation {
     margin-top: 0.618em !important;
 
   }
+  #main .archive.content-area.row .col-md-4 article {
+    min-height: auto;
+  }
 }
 
 @media (max-width: 922px) {
@@ -1722,7 +1919,6 @@ nav.navigation.post-navigation {
   .photo-box .image-wrap img {
     zoom: 30.555%;
   }
-
 }
 
 @media (min-width: 970px) {

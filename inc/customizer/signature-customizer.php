@@ -9,10 +9,10 @@ $wp_customize -> add_section(
 		'title' 					=> __('Signature Template'),
 		'description'			=> __('Signature Template Features'),
 		'priority'				=> 80,
-		'active_callback'	=> function() { return is_page_template('page-templates/signature-template.php');}
+		'active_callback'	=> function() { return is_page_template('page-templates/signature-template.php') || is_page_template('page-templates/signature-template-blog.php'); }
 	)
 );
-	
+
 //	Creates color picker for signature rows - signature template
 	$wp_customize -> add_setting ( 'signature_bg_color', array(
 		'default'							=> '#2b343d',

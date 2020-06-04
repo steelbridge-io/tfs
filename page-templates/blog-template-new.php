@@ -1,7 +1,7 @@
 <?php
 /**
  * Template Name: Blog Template New
- * Template Post Type: post, page, travel_blog, flyfishing-news
+ * Template Post Type: post, page
  * Developed for The Fly Shop
  * @package The_Fly_Shop
  * Author: Chris Parsons
@@ -10,7 +10,7 @@
 
 $the_blogpost_img = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full');
 $the_post_default = get_bloginfo('template_directory') . '/images/default/default-page-header.png';
-$blog_logo_upload = get_theme_mod ('blog_logo');
+$new_blog_logo = get_theme_mod ('blog_logo_new');
 
 include_once('post-meta/post-meta-blog.php');
 
@@ -29,7 +29,7 @@ get_header();
                     <div class="basicpagelogo signature-header template-class text-center">
 
                         <dl class="landing-hd">
-                            <dd class="dd-1"><img src="<?php echo $blog_logo_upload; ?>" class="img-responsive-logo" alt="The Fly Shop Logo" title="Basic Logo"></dd>
+                            <dd class="dd-1"><img src="<?php echo $new_blog_logo ?>" class="img-responsive-logo" alt="" title=""></dd>
 
                             <dd class="dd-2"><h2 class="logo-tel"><?php echo get_the_title(); ?></h2></dd>
 
@@ -104,6 +104,7 @@ get_header();
                                 </div>
                             </div>
                         </div>
+                    </div>
 
                         <?php endif; ?>
 

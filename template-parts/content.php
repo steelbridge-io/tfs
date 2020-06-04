@@ -26,7 +26,7 @@ include_once(get_template_directory() . '/page-templates/post-meta/post-meta-def
 
       <dd class="dd-2"><h2 class="logo-tel"><?php echo get_the_title(); ?></h2></dd>
 
-       <?php if ( get_post_meta($post->ID, 'signature-description', true) ) 
+       <?php if ( get_post_meta($post->ID, 'signature-description', true) )
           echo '<dd class="dd-3"><p class="template-description">' . $default_page_description . '</p></dd>' ?>
 
       <dd class="dd-4"><h3 class="logo-tel"><a href="tel:18006693474">800 &bull; 669 &bull; 3474</a></h3></dd>
@@ -59,7 +59,7 @@ include_once(get_template_directory() . '/page-templates/post-meta/post-meta-def
 	<div class="container default-template">
 
 		<div id="default-entry-styles" class="entry-content">
-    <h2 class="logo-tel"><?php echo get_the_title(); ?></h2>
+        <h2 class="logo-tel"><?php echo get_the_title(); ?></h2>
 			<?php
 				the_content( sprintf(
 					/* translators: %s: Name of current post. */
@@ -77,6 +77,8 @@ include_once(get_template_directory() . '/page-templates/post-meta/post-meta-def
 	</div><!-- .container-fluid -->
 
 	<footer class="entry-footer">
+      <div class="container">
 		<?php the_fly_shop_entry_footer(); ?>
+      </div>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->

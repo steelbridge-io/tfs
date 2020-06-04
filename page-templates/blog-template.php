@@ -1,4 +1,4 @@
-<?php 
+<?php
 /**
  * Template Name: Blog Template
  * Template Post Type: post, page, travel_blog
@@ -10,18 +10,18 @@
 
 $the_blogpost_img = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full');
 $the_post_default = get_bloginfo('template_directory') . '/images/default/default-page-header.png';
-$blog_logo_upload = get_theme_mod ('blog_logo');
+$bloglogoupload = get_theme_mod('blog_logo');
 
 include_once('post-meta/post-meta-blog.php');
 
-get_header(); 
+get_header();
 ?>
 
 
 </div> <!-- /.container-fluid. Opening tag found in header.php-->
-	
+
 <div id="primary" class="content-area" style="position: relative;">
-	<div id="main" role="main"> 
+	<div id="main" role="main">
 
 	<?php if ( has_post_thumbnail() ) : ?>
 
@@ -34,11 +34,11 @@ get_header();
 		<div class="basicpagelogo signature-header template-class text-center">
 		
 			<dl class="landing-hd">
-				<dd class="dd-1"><img src="<?php echo $blog_logo_upload; ?>" class="img-responsive-logo" alt="The Fly Shop Logo" title="Basic Logo"></dd>
+				<dd class="dd-1"><img src="<?php echo $bloglogoupload; ?>" class="img-responsive-logo" alt="The Fly Shop Logo" title="Basic Logo"></dd>
 				
 				<dd class="dd-2"><h2 class="logo-tel"><?php echo get_the_title(); ?></h2></dd>
 
-				 <?php if ( get_post_meta($post->ID, 'signature-description', true) ) 
+				 <?php if ( get_post_meta($post->ID, 'signature-description', true) )
 						echo '<dd class="dd-3"><p class="template-description">' . $blog_description . '</p></dd>' ?>
 						
 				<dd class="dd-4"><h3 class="logo-tel"><a href="tel:18006693474">800 &bull; 669 &bull; 3474</a></h3></dd>
@@ -47,7 +47,7 @@ get_header();
 			</div>
 		</div>
 	</div>
-		
+	
 
 	<?php else: ?>
 
@@ -55,15 +55,15 @@ get_header();
 	
 		<div id="blogpage" class="text-center template-class">
 		
-		<img src="<?php echo $blog_logo; ?>" class="img-responsive center-block" alt="Staff Logo" title="Blog Logo">
+		<img src="<?php echo $bloglogoupload; ?>" class="img-responsive center-block" alt="Staff Logo" title="Blog Logo">
 		
 		<h2><?php echo get_the_title();  ?></h2>
 		
-		 <?php if ( get_post_meta($post->ID, 'blog-description', true) ) 
+		 <?php if ( get_post_meta($post->ID, 'blog-description', true) )
 						echo '<p class="template-description">' . $blog_description . '</p>' ?>
 						
 			<h3>800 &bull; 669 &bull; 3474</h3>
-				
+			
 		</div>
 		
 	</header>
@@ -71,7 +71,7 @@ get_header();
 	<?php endif; ?>
 
 	</div>
-</div> 
+</div>
 
 <div class="wrapper">
 	<div class="container">
@@ -131,7 +131,7 @@ get_header();
 				// If comments are open or we have at least one comment, load up the comment template.
 				if ( comments_open() || get_comments_number() ) :
 				comments_template();
-				endif;		
+				endif;
 				?>
 
 			</main>

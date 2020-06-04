@@ -3,6 +3,35 @@
  * http://brm.io/jquery-match-height/
  * License: MIT
  */
+AOS.init({
+    animatedClassName: 'aos-animate', // class applied on animation
+    useClassNames: true,
+    delay: 1500, // values from 0 to 3000, with step 50ms
+    duration: 1500, // values from 0 to 3000, with step 50ms
+    easing: 'ease', // default easing for AOS animations
+});
+
+// When the user scrolls down 50px from the top of the document, resize the header's font size
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 350 || document.documentElement.scrollTop > 350) {
+        document.getElementById("news-cta").style.maxHeight = "1200px";
+        document.getElementById("news-cta").style.height = "auto";
+        document.getElementById("news-cta").style.backgroundColor = "black";
+        document.getElementById("news-cta").style.transition = "max-height 1.5s ease-out";
+    } else {
+        var a = document.getElementById('news-cta');
+        if (typeof(a) != 'undefined' && a != null) {
+            a.style.maxHeight = "0px";
+        }
+        var b = document.getElementById("news-cta");
+        if (typeof(b) != 'undefined' && a != null) {
+            b.style.backgroundColor = "none";
+        }
+    }
+}
+
 (function(d) {
     var g = -1,
         e = -1,

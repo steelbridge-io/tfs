@@ -22,6 +22,7 @@
 	include 'customizer-css/default-css.php';
 	include 'customizer-css/archive-css.php';
 	include 'customizer-css/holiday-css.php';
+	include 'customizer-css/travelblog-css.php';
 
 /**
  * Add postMessage support for site title and description for the Theme Customizer.
@@ -47,10 +48,11 @@ function the_fly_shop_customize_register( $wp_customize ) {
 	include 'customizer/signature-events-customizer.php';
 	include 'customizer/footer-customizer.php';
 	include 'customizer/travel-customizer.php';
-    include 'customizer/default-template-customizer.php';
-    include 'customizer/archive-template-customizer.php';
-    include 'customizer/survey-customizer.php';
-    include 'customizer/holiday-customizer.php';
+	include 'customizer/default-template-customizer.php';
+	include 'customizer/archive-template-customizer.php';
+	include 'customizer/survey-customizer.php';
+	include 'customizer/holiday-customizer.php';
+	include 'customizer/travel-blog-customizer.php';
 	
 	
 /**
@@ -63,7 +65,7 @@ function the_fly_shop_customize_register( $wp_customize ) {
 	$wp_customize->remove_control( 'background_color' );
 	$wp_customize->remove_section( 'static_front_page' );
 	$wp_customize->get_section( 'title_tagline' )->active_callback = 'is_front_page';
-    $wp_customize->remove_section( 'header_image' );
+	$wp_customize->remove_section( 'header_image' );
 
 	/*
 	*	Custom options for The Fly Shop Theme
