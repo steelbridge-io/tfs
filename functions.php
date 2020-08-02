@@ -16,6 +16,7 @@ include_once 'inc/author.php';
 include_once 'inc/author-img/custom-author-image.php';
 include_once 'inc/blog/blog-template-css.php';
 
+add_editor_style( 'style-editor.css' );
 
 if ( ! function_exists( 'the_fly_shop_setup' ) ) :
     /**
@@ -26,6 +27,88 @@ if ( ! function_exists( 'the_fly_shop_setup' ) ) :
      * as indicating support for post thumbnails.
      */
     function the_fly_shop_setup() {
+  
+      add_theme_support('editor-styles');
+      add_theme_support( 'wp-block-styles' );
+      add_theme_support( 'align-wide' );
+      add_theme_support( 'editor-styles' );
+      add_theme_support( 'dark-editor-style' );
+  
+      add_theme_support( 'editor-font-sizes', array(
+        array(
+          'name' => __( 'Small', 'themeLangDomain' ),
+          'size' => 12,
+          'slug' => 'small'
+        ),
+        array(
+          'name' => __( 'Regular', 'themeLangDomain' ),
+          'size' => 16,
+          'slug' => 'regular'
+        ),
+        array(
+          'name' => __( 'Large', 'themeLangDomain' ),
+          'size' => 36,
+          'slug' => 'large'
+        ),
+        array(
+          'name' => __( 'Huge', 'themeLangDomain' ),
+          'size' => 50,
+          'slug' => 'huge'
+        )
+      ) );
+  
+      add_theme_support( 'editor-color-palette', array(
+        array(
+          'name' => __( 'strong magenta', 'themeLangDomain' ),
+          'slug' => 'strong-magenta',
+          'color' => '#a156b4',
+        ),
+        array(
+          'name' => __( 'light grayish magenta', 'themeLangDomain' ),
+          'slug' => 'light-grayish-magenta',
+          'color' => '#d0a5db',
+        ),
+        array(
+          'name' => __( 'very light gray', 'themeLangDomain' ),
+          'slug' => 'very-light-gray',
+          'color' => '#eee',
+        ),
+        array(
+          'name' => __( 'very dark gray', 'themeLangDomain' ),
+          'slug' => 'very-dark-gray',
+          'color' => '#444',
+        ),
+        
+        'editor-gradient-presets',
+        array(
+          array(
+            'name'     => __( 'Vivid cyan blue to vivid purple', 'themeLangDomain' ),
+            'gradient' => 'linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%)',
+            'slug'     => 'vivid-cyan-blue-to-vivid-purple'
+          ),
+          array(
+            'name'     => __( 'Vivid green cyan to vivid cyan blue', 'themeLangDomain' ),
+            'gradient' => 'linear-gradient(135deg,rgba(0,208,132,1) 0%,rgba(6,147,227,1) 100%)',
+            'slug'     =>  'vivid-green-cyan-to-vivid-cyan-blue',
+          ),
+          array(
+            'name'     => __( 'Light green cyan to vivid green cyan', 'themeLangDomain' ),
+            'gradient' => 'linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%)',
+            'slug'     => 'light-green-cyan-to-vivid-green-cyan',
+          ),
+          array(
+            'name'     => __( 'Luminous vivid amber to luminous vivid orange', 'themeLangDomain' ),
+            'gradient' => 'linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%)',
+            'slug'     => 'luminous-vivid-amber-to-luminous-vivid-orange',
+          ),
+          array(
+            'name'     => __( 'Luminous vivid orange to vivid red', 'themeLangDomain' ),
+            'gradient' => 'linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%)',
+            'slug'     => 'luminous-vivid-orange-to-vivid-red',
+          ),
+        )
+      ) );
+      
         /*
          * Make theme available for translation.
          * Translations can be filed in the /languages/ directory.
@@ -139,13 +222,8 @@ function the_fly_shop_widgets_init() {
       'before_title'  => '<h2 class="widget-title">',
       'after_title'   => '</h2>',
     ) );
-    
-    
-  
-  
 }
 add_action( 'widgets_init', 'the_fly_shop_widgets_init' );
-
 
 /**
  * Enqueue scripts and styles.
@@ -175,7 +253,7 @@ function the_fly_shop_scripts() {
 
     wp_enqueue_style( 'the-fly-shop-ie8', get_template_directory_uri() . '/assets/css/ie8.css', array(), '20161116', 'all' );
 
-    wp_enqueue_style( 'the-fly-shop-main-style', get_template_directory_uri() . '/assets/css/main.css', array(),  '20161116', 'all' );
+    wp_enqueue_style( 'the-fly-shop-main-style', get_template_directory_uri() . '/assets/sass/main.css', array(),  '20161116', 'all' );
 
     wp_enqueue_style( 'the-fly-shop-custom-style', get_template_directory_uri() . '/assets/css/custom.css', array(), '20161116', 'all' );
     
@@ -313,7 +391,6 @@ function the_fly_shop_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'the_fly_shop_scripts' );
 
-
 /**
  * Implement the Custom Header feature.
  */
@@ -342,7 +419,6 @@ require get_template_directory() . '/inc/jetpack.php';
 /*
 *	DO NOT ADD OR EDIT ABOVE THIS LINE === Custom edits go below this line
 */
-
 
 /**
  * Hide the main editor on page using front-page-template.php
@@ -466,6 +542,7 @@ add_filter( 'request', 'myfeed_request' );
 
 // Do Short Code In Widgets
 add_filter( 'widget_text', 'do_shortcode' );
+add_filter('the_content', 'do_shortcode');
 
 // Changing excerpt more
 function new_excerpt_more($more) {
@@ -490,15 +567,10 @@ function custom_excerpt_length( $length ) {
   
 }
 
-
-
-
-
 // Adds .html to pages
 add_action('init', 'html_page_permalink', -1);
 register_activation_hook(__FILE__, 'cvf_active');
 register_deactivation_hook(__FILE__, 'cvf_deactive');
-
 
 function html_page_permalink() {
   
@@ -541,3 +613,17 @@ function cvf_deactive() {
   $wp_rewrite->flush_rules();
   
 }
+
+
+// Redirects visitors from other countries except the US and Canada.
+add_action( 'template_redirect', 'country_redirect' );
+function country_redirect()
+{
+  $country = file_get_contents("https://api.db-ip.com/v2/free/{$_SERVER['REMOTE_ADDR']}/countryCode");
+  if (!in_array($country, ["US", "CA"]) && is_page('intro')) {
+    wp_redirect('/the-fly-shop-online-catalogs.html');
+    exit;
+  }
+}
+
+

@@ -20,6 +20,7 @@ Custom styles for The Fly Shop Theme
 	- Basic Template
 	- Staff Template
 	- Travel Template
+  - Gravity Forms
   - Events Template
 	- Signature Template
 	- Guide Service Template
@@ -43,6 +44,7 @@ Custom styles for The Fly Shop Theme
   - Modal
   - Templates
     - Travel Template With Blog
+    - Blog Template
   - Widgets
   - Media Queries
 
@@ -1054,6 +1056,16 @@ header.page-header {
   white-space: normal;
 }
 
+/* Gravity Forms
+-------------------------------- */
+.ginput_container.ginput_container_phone > input.medium {
+  border: none;
+}
+
+.gform_wrapper .gform_footer {
+  padding: 16px 0 10px 0.5em !important;
+}
+
 /* Events Template
 -------------------------------- */
 h2.logo-tel {
@@ -1699,6 +1711,16 @@ h3.popover-title {
 
 /* Gutenberg
 ------------------------------- */
+/* Gallery - Catalog */
+.entry-content .alignfull.online-catalog {
+  justify-content: center;
+  background: #000;
+}
+
+.online-catalog figcaption {
+  background: transparent !important;
+}
+
 .entry-content .alignwide {
   margin-left: -80px;
   margin-right: -80px;
@@ -1938,6 +1960,26 @@ nav.navigation.post-navigation .polls.nav-previous .fa-chevron-left {
 #travel-feed-fp-top .newscta {
   text-align: center;
   overflow: auto;
+}
+
+/* Blog Template */
+#blog-cta .blog.wrapper.style4 {
+  width: 100%;
+}
+#blog-cta .blog.wrapper.style4 .inner {
+  width: 100%;
+}
+#blog-cta .blog.wrapper.style4 .inner .text-center h2 {
+  color: #fff;
+}
+#blog-cta .blog .inner span.blog-cta-content {
+  text-align: center;
+}
+#blog-cta .blog-cta-content {
+  padding: 1.618em 0.5em 0 0.5em;
+}
+#blog-cta .wrapper {
+  padding: 1em;
 }
 
 /* Widgets

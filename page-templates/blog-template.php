@@ -87,12 +87,29 @@ get_header();
 				?>
 
 				<?php
+                
+                // Call To Action
+                if(get_post_meta(get_the_ID(), 'basic-cta-checkbox', true) == 'yes') :?>
+                <!-- CALL TO ACTION ROW -->
+                <section id="blog-cta">
+                  <div class="blog wrapper style4">
+                    <div class="inner">
+                      <header class="text-center">
+                        <h2><?php echo $blog_cta_title;?></h2>
+                      </header>
+                      <div class="blog-cta-content"><?php echo do_shortcode($blog_cta_content); ?></div>
+                    </div>
+                  </div>
+                </section>
+              
+              <?php endif;
+              
 				// Get Author Data
 				$author             = get_the_author();
 				$author_description = get_the_author_meta( 'description' );
 				$author_url         = esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) );
 				$author_avatar      = get_avatar( get_the_author_meta( 'user_email' ), apply_filters( 'wpex_author_bio_avatar_size', 75 ) );
-
+				
 				// Only display if author has a description
 				if ( $author_description ) : ?>
 					<div class="row">
