@@ -16,7 +16,24 @@ include_once 'inc/author.php';
 include_once 'inc/author-img/custom-author-image.php';
 include_once 'inc/blog/blog-template-css.php';
 
+/**
+ * Customizer additions.
+ */
+require get_template_directory() . '/inc/customizer.php';
+
+
 add_editor_style( 'style-editor.css' );
+
+// Admin Notice Message
+/*function pippin_admin_notices() {
+  ob_start(); ?>
+  
+  <div class="error">
+    <h4><strong>Attention</strong>: Website updates are about to be applied, which means Save Your Work And Log Out. You have 30 minutes.</h4>
+  </div>
+  <?php echo ob_get_clean(); }
+
+add_action('admin_notices', 'pippin_admin_notices');*/
 
 if ( ! function_exists( 'the_fly_shop_setup' ) ) :
     /**
@@ -222,6 +239,16 @@ function the_fly_shop_widgets_init() {
       'before_title'  => '<h2 class="widget-title">',
       'after_title'   => '</h2>',
     ) );
+  
+  register_sidebar( array(
+    'name'          => esc_html__( 'Sidebar Lower48', 'the-fly-shop' ),
+    'id'            => 'sidebar-4',
+    'description'   => esc_html__( 'Add widgets here.', 'the-fly-shop' ),
+    'before_widget' => '<section id="%1$s" class="widget %2$s">',
+    'after_widget'  => '</section>',
+    'before_title'  => '<h2 class="widget-title">',
+    'after_title'   => '</h2>',
+  ) );
 }
 add_action( 'widgets_init', 'the_fly_shop_widgets_init' );
 
@@ -239,15 +266,12 @@ function the_fly_shop_scripts() {
 
     wp_register_style( 'dashicons-tfs', get_template_directory_uri(). '/assets/css/dashicons.min.css');
     wp_enqueue_style( 'dashicons-tfs' );
-    
+   
     wp_register_style( 'the-fly-shop-fontawesome', get_template_directory_uri() . '/assets/css/font-awesome.min.css', array(), '4.4.0', 'all' );
     wp_enqueue_style( 'the-fly-shop-fontawesome' );
 
     wp_register_style( 'the-fly-shop-btstrp-menu', get_template_directory_uri() . '/assets/css/bootstrap-submenu.min.css', array(), '2.0.4', 'all' );
     wp_enqueue_style( 'the-fly-shop-btstrp-menu' );
-
-    // Instafeed CSS
-    wp_enqueue_style( 'the-fly-shop-instafeed-style', get_template_directory_uri() . '/assets/css/instafeed.css', array(), '20161116', 'all' );
 
     wp_enqueue_style( 'the-fly-shop-ie9', get_template_directory_uri() . '/assets/css/ie9.css', array(), '20161116', 'all' );
 
@@ -272,7 +296,7 @@ function the_fly_shop_scripts() {
   if(function_exists('load_guide_service_css')) {
     wp_add_inline_style('the-fly-shop-custom-style', load_guide_service_css());
   }
-  if(function_exists('load_school_css')) {
+  if(function_exists('load_schools_css')) {
     wp_add_inline_style('the-fly-shop-custom-style', load_schools_css());
   }
   if(function_exists('load_schools_hero_css')) {
@@ -362,12 +386,6 @@ function the_fly_shop_scripts() {
 
     wp_enqueue_script( 'the-fly-shop-btstrp-submenu', get_template_directory_uri() . '/assets/js/bootstrap-submenu.js', array(), '20161116', true );
 
-    // Instafeed JS
-    wp_enqueue_script( 'the-fly-shop-instafeedjs', get_template_directory_uri() . '/assets/js/instafeed.js', array(), '20161116', true );
-
-    // Instafeed JS
-    wp_enqueue_script( 'the-fly-shop-instafeed-setup', get_template_directory_uri() . '/assets/js/instafeed-setup.js', array(), '20161116', true );
-
     wp_enqueue_script( 'the-fly-shop-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
     
     wp_enqueue_script( 'aos-js', get_template_directory_uri() . '/aos-animations/aos/dist/aos.js', array(), '', true );
@@ -391,6 +409,13 @@ function the_fly_shop_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'the_fly_shop_scripts' );
 
+// Loads custom style sheet on Admin
+function enqueue_custom_admin_style() {
+  wp_register_style( 'custom_wp_admin_css', get_template_directory_uri() . '/assets/css/admin-style.css', false, '1.0.0' );
+  wp_enqueue_style( 'custom_wp_admin_css' );
+}
+add_action( 'admin_enqueue_scripts', 'enqueue_custom_admin_style' );
+
 /**
  * Implement the Custom Header feature.
  */
@@ -405,11 +430,6 @@ require get_template_directory() . '/inc/template-tags.php';
  * Custom functions that act independently of the theme templates.
  */
 require get_template_directory() . '/inc/extras.php';
-
-/**
- * Customizer additions.
- */
-require get_template_directory() . '/inc/customizer.php';
 
 /**
  * Load Jetpack compatibility file.
@@ -614,12 +634,11 @@ function cvf_deactive() {
   
 }
 
-
 // Redirects visitors from other countries except the US and Canada.
 add_action( 'template_redirect', 'country_redirect' );
 function country_redirect()
 {
-  $country = file_get_contents("https://api.db-ip.com/v2/free/{$_SERVER['REMOTE_ADDR']}/countryCode");
+  $country = file_get_contents("https://api.db-ip.com/v2/2497b5bdbfa4553039fb2c22dc36c79885e9c0e2/{$_SERVER['REMOTE_ADDR']}/countryCode");
   if (!in_array($country, ["US", "CA"]) && is_page('intro')) {
     wp_redirect('/the-fly-shop-online-catalogs.html');
     exit;

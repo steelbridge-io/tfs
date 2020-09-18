@@ -7,61 +7,40 @@
  * @package The_Fly_Shop
  */
 
-include_once(get_template_directory() . '/page-templates/post-meta/post-meta-default.php');
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class('default-template'); ?>>
-
-<?php if ( has_post_thumbnail() ) { ?>
-		
-  <header class="template-header">
-
-  <img src="<?php echo $default_post_img['0']; ?>" class="paralaxed img-responsive-width-100 center-block">
-
-  <div class="center-content-flex template-header-content">
-  <div class="basicpagelogo signature-header template-class text-center">
-
-    <dl class="landing-hd">
-      <dd class="dd-1"><img src="<?php echo $default_logo_upload; ?>" class="img-responsive-logo" alt="The Fly Shop Logo" title="The Fly Shop Default Template Logo"></dd>
-
-      <dd class="dd-2"><h2 class="logo-tel"><?php echo get_the_title(); ?></h2></dd>
-
-       <?php if ( get_post_meta($post->ID, 'signature-description', true) )
-          echo '<dd class="dd-3"><p class="template-description">' . $default_page_description . '</p></dd>' ?>
-
-      <dd class="dd-4"><h3 class="logo-tel"><a href="tel:18006693474">800 &bull; 669 &bull; 3474</a></h3></dd>
-    </dl>
-
-    </div>
-  </div>
-  </header>
-		
-<?php } else { ?>
-	
-	<header class="entry-header basic-page text-center">
-		<?php
-		if ( is_single() ) :
-			the_title( '<h1 class="entry-title">', '</h1>' );
-		else :
-			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-		endif;
-
-		if ( 'post' === get_post_type() ) : ?>
-		<div class="entry-meta">
-			<?php the_fly_shop_posted_on(); ?>
-		</div><!-- .entry-meta -->
-		<?php
-		endif; ?>
-	</header><!-- .entry-header -->
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
   
-  <?php } ?>
+  <div class="article-content row">
 
-	<div class="container default-template">
+<?php if ( has_post_thumbnail() ) {
+  global $post;
+  $featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'full');
+  $post_title = get_the_title($post->ID);
+  $post_permalink = get_the_permalink($post->ID);
+  
+  ?>
+  
+  <div class="col-md-4">
+    <a href="<?php echo $post_permalink; ?>" title="<?php echo $post_title; ?>">
+    <img class="img-responsive" src="<?php echo $featured_img_url ?>" alt="">
+    </a>
+    
+  </div>
+  
+		
+<?php } ?>
 
-		<div id="default-entry-styles" class="entry-content">
-        <h2 class="logo-tel"><?php echo get_the_title(); ?></h2>
+	<div id="content-template-part-content" class="col-md-8">
+
+		<div id="default-entry-styles" class="entry-content content-part">
+          
+          <a href="<?php echo get_the_permalink($post->ID); ?>" title="<?php echo get_the_title($post->ID); ?>">
+            <h2 class="content-title"><?php echo get_the_title(); ?></h2>
+          </a>
+          <p><b>Published:&nbsp;<?php echo get_the_date( 'F j, Y' ); ?></b></p>
 			<?php
-				the_content( sprintf(
+				the_excerpt( sprintf(
 					/* translators: %s: Name of current post. */
 					wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'the-fly-shop' ), array( 'span' => array( 'class' => array() ) ) ),
 					the_title( '<span class="screen-reader-text">"', '"</span>', false )
@@ -75,10 +54,5 @@ include_once(get_template_directory() . '/page-templates/post-meta/post-meta-def
 		</div><!-- .entry-content -->
 		
 	</div><!-- .container-fluid -->
-
-	<footer class="entry-footer">
-      <div class="container">
-		<?php the_fly_shop_entry_footer(); ?>
-      </div>
-	</footer><!-- .entry-footer -->
+  </div>
 </article><!-- #post-## -->

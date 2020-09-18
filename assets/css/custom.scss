@@ -17,6 +17,7 @@ Custom styles for The Fly Shop Theme
 	- page.php
 	- Blog
 	- Basic Template
+	- Schools Template
 	- Staff Template
 	- Travel Template
   - Gravity Forms
@@ -50,26 +51,24 @@ Custom styles for The Fly Shop Theme
 */
 
 @import 'dep/var';
+body {
+  height: 100% !important;
+}
+html {
+  overflow:scroll !important;
+}
 
 /* Blog
 ----------------------------- **/
-.outter, .inner {
+.outer {
+  overflow: hidden;
+  width: 100%;
+}
+.inner {
   position: relative;
   margin: 0;
+
   /* height: 1000px;*/
-}
-#image {
-  width: 100%;
-  height: auto;
-  min-height: 600px;
-  display: block;
-  /*position: fixed;*/
-  top: 0;
-  left: 0;
-  background-size: 150% auto;
-  background-repeat: no-repeat;
-  background-position: center center;
-  /*background-image: url(http://upload.wikimedia.org/wikipedia/commons/b/bc/Rosegarden_ubc.jpg);*/
 }
 
 .w-angle-att-img img {
@@ -161,13 +160,13 @@ Custom styles for The Fly Shop Theme
 }
 .nav-links .nav-previous a,
 .nav-links .nav-next a {
-  background-color: var(--womens-pink);
+  background-color: var(--black);
   padding: .4em;
-  color: var(--black);
+  color: var(--white);
 }
 .nav-links .nav-previous a:hover,
 .nav-links .nav-next a:hover {
-  background-color: var(--womens-pink-hover);
+  background-color: var(--dark-gray);
 }
 .nav-next, .nav-previous {
   align-items: center;
@@ -676,9 +675,6 @@ p.template-description {
   }
 }
 
-
-
-
 /* page.php
 -------------------------------- */
 .basic-page h1 {
@@ -1185,27 +1181,7 @@ address strong {
 .display-inline-block {
   display: inline-block;
 }
-.mt-1618 {
-  margin: 1.618em 0 0 0;
-}
-.mt-1 {
-  margin-top: 1em;
-}
-.mt-05 {
-  margin-top: 0.5em;
-}
-.mb-1618 {
-  margin: 0 0 1.618em 0;
-}
-.pt-1618 {
-  padding-top: 1.618em;
-}
-.no-margin-bottom {
-  margin-bottom: 0 !important;
-}
-.pb-1618 {
-  padding: 0 0 1.618em 0;
-}
+
 .blog-lead {
   color: #f5f5f5;
   font-size: 1.2em;
@@ -1343,6 +1319,18 @@ nav#nav {
 }
 .panel-heading:hover {
   cursor: pointer;
+}
+.collapsed .readmore-info {
+  display: block;
+}
+.readmore-info {
+  font-size: 12px;
+  color: #ccc;
+  font-weight: 500;
+  font-style: italic;
+  display: flex;
+  margin-top: 1em;
+  display: none;
 }
 
 /* Scroll To ID
@@ -1751,6 +1739,10 @@ nav.navigation.post-navigation {
 ------------------------------- */
 
 /*Travel Template With Blog*/
+
+.wrap .container {
+  margin: 3.618em auto 1.618em;
+}
 #travel-feed-fp-top {
   #news-cta {
     /*background-color: var(--black);*/
@@ -1790,10 +1782,10 @@ nav.navigation.post-navigation {
   }
 }
 
-
 /* Blog Template */
 
 #blog-cta {
+  margin: 1.618em 0;
   .blog.wrapper.style4 {
     width: 100%;
     .inner {
@@ -1921,6 +1913,12 @@ nav.navigation.post-navigation {
   .photo-box .image-wrap img {
     zoom: 33.555%;
   }
+
+  #image {
+    min-height: 600px;
+  }
+
+
 }
 
 @media (max-width: 991px) {
@@ -2019,17 +2017,31 @@ nav.navigation.post-navigation {
 
 }
 
+
+@media (max-width: 1024px ) {
+
+}
+
+@media ( max-width: 834px ) {
+
+}
+@media ( max-width: 800px ) {
+
+}
+@media ( max-width: 768px ) {
+
+}
 @media (min-width: 736px ) {
   #s3 {
     display: none;
   }
 }
-
 @media (max-width: 735px ) {
   #s4, .scrollto.animated.animatedFadeInUp.fadeInUp {
     display: none;
   }
 }
+
 
 @media (max-width: 600px) {
 
@@ -2071,6 +2083,23 @@ nav.navigation.post-navigation {
 @media (max-width: 320px) {
   .photo-box .image-wrap img {
     zoom: 13.777%;
+
+    #image {
+      min-height: 171px;
+    }
   }
 
 }
+
+@import 'supports/variables';
+@import 'supports/travel-blog';
+@import 'supports/sidebars';
+@import 'supports/outfitters-blog';
+@import 'supports/new-blog-template';
+@import 'supports/front-page';
+@import 'supports/travel-signature-template';
+@import 'supports/taxonomy-archive';
+@import 'supports/content';
+@import 'supports/content';
+@import 'supports/margin-padding';
+

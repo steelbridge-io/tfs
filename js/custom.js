@@ -3,6 +3,15 @@
  * http://brm.io/jquery-match-height/
  * License: MIT
  */
+
+
+/*if( ! /Android|webOS|iPhone|iPod|iPad|BlackBerry/i.test(navigator.userAgent)) {
+
+    $(document).ready(function () {
+        var s = skrollr.init();
+    })
+}*/
+
 AOS.init({
     animatedClassName: 'aos-animate', // class applied on animation
     useClassNames: true,

@@ -8,6 +8,11 @@
  */
 
 $blog_description			  = get_post_meta(get_the_ID(), 'blog-description', true);
-$blog_page_description	= get_post_meta(get_the_ID(), 'basic-page-description', true);
-$blog_cta_content				= get_post_meta(get_the_ID(), 'basic-cta-content', true);
-$blog_cta_title					= get_post_meta(get_the_ID(), 'basic-cta-title', true);
+$blog_page_description	= get_post_meta(get_the_ID(), 'blog-page-description', true);
+$blog_cta_content				= get_post_meta(get_the_ID(), 'blog-cta-content', true);
+$blog_cta_title					= get_post_meta(get_the_ID(), 'blog-cta-title', true);
+
+$basic_page_description_new = get_post_meta(get_the_ID(), 'blog-description-new', true);
+$blog_cta_title_new     = get_post_meta(get_the_ID(), 'blog-cta-title-new', true);
+$blog_cta_content_new   = get_post_meta(get_the_ID(), 'blog-cta-content-new', true);
+

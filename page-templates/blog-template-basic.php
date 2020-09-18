@@ -1,7 +1,7 @@
 <?php
 /**
- * Template Name: Blog Template
- * Template Post Type: post, page, travel_blog
+ * Template Name: Blog Template Basic
+ * Template Post Type: post, page, travel_blog, lower48blog
  * Developed for The Fly Shop
  * @package The_Fly_Shop
  * Author: Chris Parsons
@@ -17,9 +17,7 @@ include_once('post-meta/post-meta-blog.php');
 get_header();
 ?>
 
-
 </div> <!-- /.container-fluid. Opening tag found in header.php-->
-
 <div id="primary" class="content-area" style="position: relative;">
 	<div id="main" role="main">
 
@@ -27,45 +25,39 @@ get_header();
 
 	<!-- <header class="parallax-window center-content-flex" data-parallax="scroll" data-image-src="< //echo $the_blogpost_img['0']; ?>"> -->
 	<div class="template-header">
-	
 		<img src="<?php echo $the_blogpost_img['0']; ?>" class="paralaxed img-responsive-width-100 center-block">
-		
 		<div class="center-content-flex template-header-content">
-		<div class="basicpagelogo signature-header template-class text-center">
-		
-			<dl class="landing-hd">
-				<dd class="dd-1"><img src="<?php echo $bloglogoupload; ?>" class="img-responsive-logo" alt="The Fly Shop Logo" title="Basic Logo"></dd>
-				
-				<dd class="dd-2"><h2 class="logo-tel"><?php echo get_the_title(); ?></h2></dd>
-
-				 <?php if ( get_post_meta($post->ID, 'signature-description', true) )
-						echo '<dd class="dd-3"><p class="template-description">' . $blog_description . '</p></dd>' ?>
-						
-				<dd class="dd-4"><h3 class="logo-tel"><a href="tel:18006693474">800 &bull; 669 &bull; 3474</a></h3></dd>
-			</dl>
-
-			</div>
+          <div class="basicpagelogo signature-header template-class text-center">
+              <dl class="landing-hd">
+                  <dd class="dd-1"><img src="<?php echo $bloglogoupload; ?>" class="img-responsive-logo" alt="The Fly Shop Logo" title="Basic Logo"></dd>
+                  <dd class="dd-2"><h2 class="logo-tel"><?php echo get_the_title(); ?></h2></dd>
+  
+                   <?php if(!empty($blog_description)) : ?>
+                     <dd class="dd-3"><p class="template-description"><?php echo $blog_description; ?></p></dd>
+                   <?php endif;  ?>
+                  
+                   
+                  <dd class="dd-4"><h3 class="logo-tel"><a href="tel:18006693474">800 &bull; 669 &bull; 3474</a></h3></dd>
+              </dl>
+          </div>
 		</div>
 	</div>
-	
-
+ 
 	<?php else: ?>
 
 	<header class="parallax-window center-content-flex" data-parallax="scroll" data-image-src="<?php echo $the_post_default; ?>">
-	
 		<div id="blogpage" class="text-center template-class">
-		
 		<img src="<?php echo $bloglogoupload; ?>" class="img-responsive center-block" alt="Staff Logo" title="Blog Logo">
-		
 		<h2><?php echo get_the_title();  ?></h2>
-		
-		 <?php if ( get_post_meta($post->ID, 'blog-description', true) )
-						echo '<p class="template-description">' . $blog_description . '</p>' ?>
+          
+          <?php if(!empty($blog_description)) : ?>
+          <p class="template-description"><?php echo $blog_description; ?></p>
+          <?php endif; ?>
+       
 						
 			<h3>800 &bull; 669 &bull; 3474</h3>
 			
 		</div>
-		
 	</header>
 
 	<?php endif; ?>
@@ -89,7 +81,7 @@ get_header();
 				<?php
                 
                 // Call To Action
-                if(get_post_meta(get_the_ID(), 'basic-cta-checkbox', true) == 'yes') :?>
+                if(!empty($blog_cta_title)) :?>
                 <!-- CALL TO ACTION ROW -->
                 <section id="blog-cta">
                   <div class="blog wrapper style4">

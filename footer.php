@@ -29,12 +29,14 @@
         <div class="row photos-wrap">
           
           <!-- Instafeed target div -->
-          <div id="instafeed"></div>
+          <div id="instafeed">
+            <?php echo do_shortcode('[elfsight_instagram_feed id="1"]'); ?>
+          </div>
           
         </div>
-        </div> 
-          
-        </div> 
+        </div>
+        
+        </div>
       </div>
     </div>
    </section>

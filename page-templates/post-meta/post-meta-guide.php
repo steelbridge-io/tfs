@@ -1,4 +1,4 @@
-<?php 
+<?php
 /**
  * Template part for displaying post meta in guide-service-template.php.
  *
@@ -25,6 +25,7 @@ $video_gsfeature_two 													= get_post_meta(get_the_ID(), 'feature-gs2-vid
 $feature_gs2_image														= get_post_meta(get_the_ID(), 'feature-gs2-image', true);
 $feature_gs2_title                  					= get_post_meta(get_the_ID(), 'feature-gs2-title', true);
 $feature_gs2_seasons_textarea       					= get_post_meta(get_the_ID(), 'feature-gs2-seasons-textarea', true);
+$feature_gs2_seasons_readmore_info            = get_post_meta(get_the_ID(), 'feature-gs2-seasons-readmore-info', true );
 $feature_gs2_seasons_readmore                 = get_post_meta(get_the_ID(), 'feature-gs2-seasons-readmore', true);
 $feature_gs2_autumn_textarea        					= get_post_meta(get_the_ID(), 'feature-gs2-autumn-textarea', true);
 $feature_gs2_winter_textarea        					= get_post_meta(get_the_ID(), 'feature-gs2-winter-textarea', true);
@@ -35,6 +36,7 @@ $video_gsfeature_three 												= get_post_meta(get_the_ID(), 'feature-gs3-vi
 $feature_gs3_fishing_image										= get_post_meta(get_the_ID(), 'feature-gs3-image', true);
 $feature_gs3_fishing_title										= get_post_meta(get_the_ID(), 'feature-gs3-fishing-title', true);
 $feature_gs3_fishing_content									= get_post_meta(get_the_ID(), 'feature-gs3-fishing-textarea', true);
+$feature_gs3_fishing_readmore_info            = get_post_meta(get_the_ID(), 'feature-gs3-fishing-readmore-info', true );
 $feature_gs3_fishing_readmore									= get_post_meta(get_the_ID(), 'feature-gs3-fishing-readmore', true);
 
 $guide_fishing_beat1_label										= get_post_meta(get_the_ID(), 'guide-fishing-beat1-label', true );
@@ -58,7 +60,7 @@ $guide_beat_4																	= ( '' == get_theme_mod( 'guide-beat-4') ) ? 'hide
 $guide_beat_5																	= ( '' == get_theme_mod( 'guide-beat-5') ) ? 'hide-guidebeat5' : '1';
 $guide_beat_6																	= ( '' == get_theme_mod( 'guide-beat-6') ) ? 'hide-guidebeat6' : '1';
 
-$video_gsfeature_four 												= get_post_meta(get_the_ID(), 'feature-gs4-video', true);	
+$video_gsfeature_four 												= get_post_meta(get_the_ID(), 'feature-gs4-video', true);
 $feature_4_gslodging_image										= get_post_meta(get_the_ID(), 'feature-gs4-image', true);
 $feature_4_gslodging_title										= get_post_meta(get_the_ID(), 'feature-gs4-title', true);
 $feature_4_gslodging_content									= get_post_meta(get_the_ID(), 'feature-gs4-gettingto-textarea', true);
@@ -68,6 +70,7 @@ $video_gsfeature_five													= get_post_meta(get_the_ID(), 'feature-gs5-vid
 $feature_gs5_gettingto_image									= get_post_meta(get_the_ID(), 'feature-gs5-image', true );
 $feature_gs5_get_to_title											= get_post_meta(get_the_ID(), 'feature-gs3-title', true);
 $feature_gs5_get_to_content										= get_post_meta(get_the_ID(), 'feature-gs3-gettingto-textarea', true );
+$feature_gs5_readmore_info                    = get_post_meta(get_the_ID(), 'feature-gs3-readmore-info', true );
 $feature_gs5_get_to_readmore									= get_post_meta(get_the_ID(), 'feature-gs3-readmore-textarea', true );
 
 $guideservice_additional_info_image1					= get_post_meta(get_the_ID(), 'guideservice-additional-info-image1', true);

@@ -2,6 +2,7 @@
 // Post Meta Signature Destinations Template
 
 $signature_description					= get_post_meta(get_the_ID(), 'signature-description', true);
+$basic_page_description					= get_post_meta(get_the_ID(), 'signature-description', true);
 
 $csel_1_link										= get_post_meta(get_the_ID(), 'csel-1-link', true);
 $csel_1_img											= get_post_meta(get_the_ID(), 'csel-1-img', true);

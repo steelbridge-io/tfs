@@ -55,17 +55,18 @@ $beat_4																	= ( '' == get_theme_mod( 'beat-4') ) ? 'hide-beat4' : '1
 $beat_5																	= ( '' == get_theme_mod( 'beat-5') ) ? 'hide-beat5' : '1';
 $beat_6																	= ( '' == get_theme_mod( 'beat-6') ) ? 'hide-beat6' : '1';
 
-$video_pwfeature_four 									= get_post_meta(get_the_ID(), 'feature-pw4-video', true);	
+$video_pwfeature_four 									= get_post_meta(get_the_ID(), 'feature-pw4-video', true);
 $feature_4_pwlodging_image							= get_post_meta(get_the_ID(), 'feature-pw4-image', true);
 $feature_4_pwlodging_title							= get_post_meta(get_the_ID(), 'feature-pw4-title', true);
 $feature_4_pwlodging_content						= get_post_meta(get_the_ID(), 'feature-pw4-gettingto-textarea', true);
+$feature_4_pwlodging_readmore_info      = get_post_meta(get_the_ID(), 'feature-4-pwlodging-readmore-info', true);
 $feature_4_pwlodging_readmore						= get_post_meta(get_the_ID(), 'feature-pw4-readmore-textarea', true);
-
 
 $video_feature_five											= get_post_meta(get_the_ID(), 'feature-pw5-video', true);
 $feature_pw5_gettingto_image						= get_post_meta(get_the_ID(), 'feature-pw5-image', true );
 $feature_pw5_get_to_title								= get_post_meta(get_the_ID(), 'feature-pw3-title', true);
 $feature_pw5_get_to_content							= get_post_meta(get_the_ID(), 'feature-pw3-gettingto-textarea', true );
+$feature_pw5_get_to_readmore_info       = get_post_meta(get_the_ID(), 'feature-pw5-get-to-readmore-info', true );
 $feature_pw5_get_to_readmore						= get_post_meta(get_the_ID(), 'feature-pw3-readmore-textarea', true );
 
 $private_additional_info_image1					= get_post_meta(get_the_ID(), 'private-additional-info-image1', true);

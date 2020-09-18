@@ -18,6 +18,7 @@ Custom styles for The Fly Shop Theme
 	- page.php
 	- Blog
 	- Basic Template
+	- Schools Template
 	- Staff Template
 	- Travel Template
   - Gravity Forms
@@ -67,26 +68,25 @@ Custom styles for The Fly Shop Theme
   --dark-gray: #2e3842;
 }
 
+body {
+  height: 100% !important;
+}
+
+html {
+  overflow: scroll !important;
+}
+
 /* Blog
 ----------------------------- **/
-.outter, .inner {
+.outer {
+  overflow: hidden;
+  width: 100%;
+}
+
+.inner {
   position: relative;
   margin: 0;
   /* height: 1000px;*/
-}
-
-#image {
-  width: 100%;
-  height: auto;
-  min-height: 600px;
-  display: block;
-  /*position: fixed;*/
-  top: 0;
-  left: 0;
-  background-size: 150% auto;
-  background-repeat: no-repeat;
-  background-position: center center;
-  /*background-image: url(http://upload.wikimedia.org/wikipedia/commons/b/bc/Rosegarden_ubc.jpg);*/
 }
 
 .w-angle-att-img img {
@@ -192,14 +192,14 @@ Custom styles for The Fly Shop Theme
 
 .nav-links .nav-previous a,
 .nav-links .nav-next a {
-  background-color: var(--womens-pink);
+  background-color: var(--black);
   padding: 0.4em;
-  color: var(--black);
+  color: var(--white);
 }
 
 .nav-links .nav-previous a:hover,
 .nav-links .nav-next a:hover {
-  background-color: var(--womens-pink-hover);
+  background-color: var(--dark-gray);
 }
 
 .nav-next, .nav-previous {
@@ -1331,34 +1331,6 @@ address strong {
   display: inline-block;
 }
 
-.mt-1618 {
-  margin: 1.618em 0 0 0;
-}
-
-.mt-1 {
-  margin-top: 1em;
-}
-
-.mt-05 {
-  margin-top: 0.5em;
-}
-
-.mb-1618 {
-  margin: 0 0 1.618em 0;
-}
-
-.pt-1618 {
-  padding-top: 1.618em;
-}
-
-.no-margin-bottom {
-  margin-bottom: 0 !important;
-}
-
-.pb-1618 {
-  padding: 0 0 1.618em 0;
-}
-
 .blog-lead {
   color: #f5f5f5;
   font-size: 1.2em;
@@ -1516,6 +1488,20 @@ nav#nav {
 
 .panel-heading:hover {
   cursor: pointer;
+}
+
+.collapsed .readmore-info {
+  display: block;
+}
+
+.readmore-info {
+  font-size: 12px;
+  color: #ccc;
+  font-weight: 500;
+  font-style: italic;
+  display: flex;
+  margin-top: 1em;
+  display: none;
 }
 
 /* Scroll To ID
@@ -1925,6 +1911,10 @@ nav.navigation.post-navigation .polls.nav-previous .fa-chevron-left {
 /* Templates
 ------------------------------- */
 /*Travel Template With Blog*/
+.wrap .container {
+  margin: 3.618em auto 1.618em;
+}
+
 #travel-feed-fp-top #news-cta {
   /*background-color: var(--black);*/
   padding: 0 0 1.618em 0;
@@ -1963,6 +1953,9 @@ nav.navigation.post-navigation .polls.nav-previous .fa-chevron-left {
 }
 
 /* Blog Template */
+#blog-cta {
+  margin: 1.618em 0;
+}
 #blog-cta .blog.wrapper.style4 {
   width: 100%;
 }
@@ -2079,6 +2072,10 @@ nav.navigation.post-navigation .polls.nav-previous .fa-chevron-left {
 @media (max-width: 1024px) {
   .photo-box .image-wrap img {
     zoom: 33.555%;
+  }
+
+  #image {
+    min-height: 600px;
   }
 }
 @media (max-width: 991px) {
@@ -2224,6 +2221,257 @@ nav.navigation.post-navigation .polls.nav-previous .fa-chevron-left {
   .photo-box .image-wrap img {
     zoom: 13.777%;
   }
+  .photo-box .image-wrap img #image {
+    min-height: 171px;
+  }
+}
+/* SCSS Variables
+-------------------------- */
+/* Colors */
+/* Margins Padding */
+/* Travel Blog
+---------------------------------------------------- */
+#travel-blog-logo img {
+  width: 30%;
+  width: 30vh;
+}
+
+.travel-blog h2.logo-tel {
+  margin-bottom: 0;
+  font-size: 2rem;
+  padding: 0 1em;
+}
+
+#image {
+  width: 100%;
+  height: 100%;
+  min-height: 600px;
+  display: block;
+  top: 0;
+  left: 0;
+  /*background-size: 150% auto;*/
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+#image:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.travel-blog-template .outer .inner #image .template-header-content {
+  padding-top: calc((80px - 9px) * 1.2);
+}
+.travel-blog-template .outer .wrap .container {
+  margin-top: 5em;
+}
+
+.type-travel-blog .entry-content {
+  margin: 0;
+}
+
+/* Sidebars
+----------------------------------- */
+#outfitter-sidebar {
+  margin-top: 1.5em;
+}
+#outfitter-sidebar img {
+  margin: 0 auto;
+  display: block;
+}
+
+#secondary img {
+  margin: 0 auto;
+  display: block;
+}
+
+#lower48-sidebar {
+  margin-top: 1.5em;
+}
+#lower48-sidebar img {
+  margin: 0 auto;
+  display: block;
+}
+
+/* Outfitter Blog SCSS
+---------------------------------------------- */
+.wrapper-blog {
+  margin-top: 3.618em;
+}
+
+/* New Blog Template
+----------------------------------------- */
+.wrapper-new {
+  margin-top: 3.618em;
+}
+
+/* Front Page SCSS
+----------------------------------------------------- */
+.nc-fly-fishing-news {
+  display: flex;
+  justify-content: center;
+}
+
+/** SCSS for Travel Signature Template
+----------------------------------------- */
+#travel-signature-template h2 {
+  color: var(--white);
+}
+#travel-signature-template h3 {
+  margin-bottom: 0;
+  color: #f5f5f5;
+}
+#travel-signature-template p, #travel-signature-template .media-body {
+  color: var(--white);
+  font: inherit;
+  height: auto;
+  font-size: 100%;
+  line-height: initial;
+  letter-spacing: 0.075em;
+  margin-top: 1rem;
+}
+#travel-signature-template a, #travel-signature-template a:hover, #travel-signature-template h3:hover {
+  color: var(--red);
+  text-decoration: none;
+}
+#travel-signature-template .media-body {
+  color: var(--white);
+  text-align: left;
+}
+#travel-signature-template .media .media-left img {
+  width: 100%;
+  height: 250px;
+  display: block;
+  object-fit: cover;
+}
+#travel-signature-template .newscta {
+  text-align: center;
+  overflow: auto;
+  /*padding: $p1618 $p1618 $p3;*/
+}
+
+.blog-read-more.btn.btn-red {
+  font-size: 1.2rem;
+  background-color: var(--red);
+  margin-top: 3.618em;
+  color: #000000;
+}
+
+@media (min-width: 768px) {
+  .media:nth-child(n+1) {
+    padding-top: 1em;
+  }
+}
+@media (max-width: 767.98px) {
+  .media {
+    padding-top: 1em;
+  }
+}
+/* SCSS For Taxonomy Archives
+-------------------------------------------- */
+#taxonomy .taxonomy {
+  margin-top: 5em;
+  margin-bottom: 3em;
+}
+#taxonomy .taxonomy .panel {
+  border: none;
+  background-color: transparent;
+  box-shadow: none;
+}
+#taxonomy .taxonomy .panel .panel-body {
+  border: none;
+  background-color: transparent;
+}
+#taxonomy .taxonomy .panel .panel-body h1 {
+  font-size: 2rem;
+  line-height: 1.818em;
+}
+
+.taxonomy-body,
+.taxonomy-sidebar {
+  padding: 1.618em;
+}
+
+@media (min-width: 768px) {
+  .article-content.row {
+    display: flex;
+    align-items: center;
+  }
+}
+/* SCSS for content.php template part
+----------------------------------------- */
+#content-template-part-content .content-part p {
+  margin-bottom: 0;
+}
+
+h2.content-title {
+  font-size: 1.5rem;
+  line-height: 1em;
+  margin-bottom: 0.5em;
+}
+
+/* SCSS for content.php template part
+----------------------------------------- */
+#content-template-part-content .content-part p {
+  margin-bottom: 0;
+}
+
+h2.content-title {
+  font-size: 1.5rem;
+  line-height: 1em;
+  margin-bottom: 0.5em;
+}
+
+/* SCSS Margins Padding
+-------------------------------- */
+.mt-1618 {
+  margin: 1.618em 0 0 0;
+}
+
+.mt-2618 {
+  margin-top: 2.618em;
+}
+
+.mt-1 {
+  margin-top: 1em;
+}
+
+.mt-05 {
+  margin-top: 0.5em;
+}
+
+.mb-1618 {
+  margin: 0 0 1.618em 0;
+}
+
+.mb-2618 {
+  margin-bottom: 2.618em;
+}
+
+.pt-1618 {
+  padding-top: 1.618em;
+}
+
+.pb-1618 {
+  padding: 0 0 1.618em 0;
+}
+
+.pt-2618 {
+  padding-top: 2.618em;
+}
+
+.pb-2618 {
+  padding-bottom: 2.618em;
+}
+
+.no-margin-bottom {
+  margin-bottom: 0 !important;
 }
 
 /*# sourceMappingURL=custom.css.map */

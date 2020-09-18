@@ -22,10 +22,9 @@ get_header(); ?>
 			
 			<h2 id="schools-title"><?php the_title();?></h2>
 			
-			 <?php if ( get_post_meta($post->ID, 'schools-description', true) ) 
+			 <?php if ( get_post_meta($post->ID, 'schools-description', true) )
 						echo '<p class="template-description">' . $schools_waters_description . '</p>' ?>
-			
-			
+      
 			<h3 id="schools-tel">800 &bull; 669 &bull; 3474</h3>
 			
 		</div>
@@ -321,11 +320,11 @@ get_header(); ?>
 								'</div>';
 
 					} ?>
-						
+					
 					<?php if(get_post_meta(get_the_ID(), 'schools-additional-info-image2', true)) {
 					
           echo	'<div class="col-xs-6 col-md-3">',
-           
+          
 									'<div class="thumbnail">',
 
 										'<a href="#schools-carousel" data-slide-to="1"><img src=" ' . $schools_additional_info_image2 . '" class="img-responsive" data-toggle="modal" data-target=".schools-modal" alt="The Fly Shop Images"></a>',
@@ -335,7 +334,7 @@ get_header(); ?>
 								'</div>';
 						
 					} ?>
-						
+					
 					<?php if(get_post_meta(get_the_ID(), 'schools-additional-info-image3', true)) {
 						
 						echo	'<div class="col-xs-6 col-md-3">',
@@ -349,7 +348,7 @@ get_header(); ?>
 									'</div>';
 						
 					} ?>
-						
+					
 					<?php if(get_post_meta(get_the_ID(), 'schools-additional-info-image4', true)) {
 	
           echo	'<div class="col-xs-6 col-md-3">',
@@ -368,7 +367,7 @@ get_header(); ?>
         </div>
         <!-- Second Row Travel Images -->
         <div class="row">
-					<div class="additional-listing">					
+					<div class="additional-listing">
 					
 					<?php if(get_post_meta(get_the_ID(), 'schools-additional-info-image5', true)) {
 	
@@ -399,7 +398,7 @@ get_header(); ?>
 						} ?>
 						
 					<?php if(get_post_meta(get_the_ID(), 'schools-additional-info-image7', true)) {
-						
+					
 					echo	'<div class="col-xs-6 col-md-3">',
 					
 									'<div class="thumbnail">',
@@ -411,9 +410,9 @@ get_header(); ?>
 								'</div>';
 						
 					} ?>
-						
+					
 					<?php if(get_post_meta(get_the_ID(), 'schools-additional-info-image8', true)) {
-						
+					
 					echo	'<div class="col-xs-6 col-md-3">',
 					
 									'<div class="thumbnail">',
@@ -433,7 +432,7 @@ get_header(); ?>
   </section>
 
   <!-- ====== MODAL SLIDER ====== -->
-					
+		
 	<div class="additional-img modal fade schools-modal" tabindex="-1" role="dialog" aria-labelledby="schoolsModalLabel">
   <div class="additional-img modal-dialog" role="document">
 
@@ -450,39 +449,39 @@ get_header(); ?>
 			<?php if(get_post_meta(get_the_ID(), 'schools-additional-info-image2', true)) {
 	
 				echo '<li data-target="#schools-carousel" data-slide-to="1"></li>';
-					
+				
 			} ?>
 			
 			<?php if(get_post_meta(get_the_ID(), 'schools-additional-info-image3', true)) {
 			
 				echo '<li data-target="#schools-carousel" data-slide-to="2"></li>';
-					
+				
 			} ?>
 			
 			<?php if(get_post_meta(get_the_ID(), 'schools-additional-info-image4', true)) {
 	
 				echo '<li data-target="#schools-carousel" data-slide-to="3"></li>';
-					
+				
 			} ?>
 			
 			<?php if(get_post_meta(get_the_ID(), 'schools-additional-info-image5', true)) {
 			
 				echo '<li data-target="#schools-carousel" data-slide-to="4"></li>';
-					
+				
 			} ?>
 			
 			<?php if(get_post_meta(get_the_ID(), 'schools-additional-info-image6', true)) {
 	
 				echo '<li data-target="#schools-carousel" data-slide-to="5"></li>';
-					
-			} ?>
 				
-			<?php if(get_post_meta(get_the_ID(), 'schools-additional-info-image7', true)) {
-					
-				echo '<li data-target="#schools-carousel" data-slide-to="6"></li>';
-					
 			} ?>
-					
+			
+			<?php if(get_post_meta(get_the_ID(), 'schools-additional-info-image7', true)) {
+				
+				echo '<li data-target="#schools-carousel" data-slide-to="6"></li>';
+				
+			} ?>
+			
 			<?php if(get_post_meta(get_the_ID(), 'schools-additional-info-image8', true)) {
 	
 				echo '<li data-target="#schools-carousel" data-slide-to="7"></li>';
@@ -591,12 +590,12 @@ get_header(); ?>
 <!-- CALL TO ACTION ROW -->
 <section id="cta" class="wrapper style4">
 	<div class="inner">
-		
+	
 	<header class="text-center">
 		<h2><?php echo $cta_schools_strong_intro;?></h2>
 		<p><?php echo $cta_schools_content;?></p>
 	</header>
-		
+	
 	</div>
 </section>
 

@@ -1,7 +1,7 @@
 <?php
 /**
  * Template Name: Blog Template Contact Us
- * Template Post Type: post, page
+ * Template Post Type: post, page, lower48blog
  * Developed for The Fly Shop
  * @package The_Fly_Shop
  * Author: Chris Parsons
@@ -22,15 +22,11 @@ get_header();
   
   <div class="outer">
   <div class="inner">
-    <div id="image" data-0="background-size: 150% auto; opacity:1;" data-380="background-size: 100% auto; top:0;"
-         data-581="opacity:0; top=401;">
-      
+    <div id="image" data-0="background-size: 150% auto; opacity:1;" data-380="background-size: 100% auto; top:0;" data-581="opacity:0; top=401;">
       <div class="center-content-flex template-header-content">
         <div class="basicpagelogo signature-header template-class text-center">
-          
           <dl class="landing-hd">
             <dd class="dd-1"><img src="<?php echo $new_blog_logo ?>" class="img-responsive-logo" alt="" title=""></dd>
-            
             <dd class="dd-2"><h2 class="logo-tel"><?php echo get_the_title(); ?></h2></dd>
             
             <?php if ( get_post_meta($post->ID, 'signature-description', true) )
@@ -38,10 +34,7 @@ get_header();
             
             <dd class="dd-4"><h3 class="logo-tel"><a href="tel:18006693474">800 &bull; 669 &bull; 3474</a></h3></dd>
           </dl>
-        
         </div>
-      
-      
       </div>
     </div>
   </div>
@@ -51,7 +44,6 @@ get_header();
       var s = skrollr.init();
     })
   </script>
-  
   
   <div class="wrapper">
     <div class="container">
@@ -88,7 +80,6 @@ get_header();
                       <div class="row">
                         <div class="author-info-inner clr">
                           <div class="col-sm-12">
-                            
                             <div class="media">
                               <div class="media-left">
                                 <a href="<?php echo esc_url( $author_url ); ?>" rel="author"><?php echo $author_avatar; ?></a>
@@ -101,7 +92,6 @@ get_header();
                                 </div><!-- .author-description -->
                               </div>
                             </div>
-                          
                           </div><!-- .author-info-inner -->
                         </div>
                       </div><!-- .author-info -->
@@ -121,7 +111,6 @@ get_header();
           ?>
         
         </main>
-        
         <div class="col-md-4">
           <?php get_sidebar(); ?>
         </div>

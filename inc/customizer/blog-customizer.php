@@ -46,7 +46,7 @@ $wp_customize -> add_section(
     'title'							=> __('Blog Template New'),
     'description'				=> __(''),
     'priority'					=> 80,
-    'active_callback'		=> function() { return is_page_template('page-templates/blog-template-new.php');}
+    'active_callback'		=> function() { return is_page_template('page-templates/blog-template-new.php') || is_page_template('page-templates/blog-template-travel.php') ;}
   )
 );
 

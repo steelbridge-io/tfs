@@ -143,31 +143,31 @@ body {
 @media screen and (max-width: 1680px) {
   			/*.row > * { padding: ($r * $multiplier) 0 0 ($c * $multiplier); }
   			.row { margin: ($r * $multiplier * -1) 0 -1px ($c * $multiplier * -1); }
-  
+
   		// Uniform.
   			.row.uniform > * { padding: ($c * $multiplier) 0 0 ($c * $multiplier); }
   			.row.uniform { margin: ($c * $multiplier * -1) 0 -1px ($c * $multiplier * -1); }*/
   			/*.row.\32 00\% > * { padding: ($r * $multiplier) 0 0 ($c * $multiplier); }
   			.row.\32 00\% { margin: ($r * $multiplier * -1) 0 -1px ($c * $multiplier * -1); }
-  
+
   		// Uniform.
   			.row.uniform.\32 00\% > * { padding: ($c * $multiplier) 0 0 ($c * $multiplier); }
   			.row.uniform.\32 00\% { margin: ($c * $multiplier * -1) 0 -1px ($c * $multiplier * -1); }*/
   			/*.row.\31 50\% > * { padding: ($r * $multiplier) 0 0 ($c * $multiplier); }
   			.row.\31 50\% { margin: ($r * $multiplier * -1) 0 -1px ($c * $multiplier * -1); }
-  
+
   		// Uniform.
   			.row.uniform.\31 50\% > * { padding: ($c * $multiplier) 0 0 ($c * $multiplier); }
   			.row.uniform.\31 50\% { margin: ($c * $multiplier * -1) 0 -1px ($c * $multiplier * -1); }*/
   			/*.row.\35 0\% > * { padding: ($r * $multiplier) 0 0 ($c * $multiplier); }
   			.row.\35 0\% { margin: ($r * $multiplier * -1) 0 -1px ($c * $multiplier * -1); }
-  
+
   		// Uniform.
   			.row.uniform.\35 0\% > * { padding: ($c * $multiplier) 0 0 ($c * $multiplier); }
   			.row.uniform.\35 0\% { margin: ($c * $multiplier * -1) 0 -1px ($c * $multiplier * -1); }*/
   			/*.row.\32 5\% > * { padding: ($r * $multiplier) 0 0 ($c * $multiplier); }
   			.row.\32 5\% { margin: ($r * $multiplier * -1) 0 -1px ($c * $multiplier * -1); }
-  
+
   		// Uniform.
   			.row.uniform.\32 5\% > * { padding: ($c * $multiplier) 0 0 ($c * $multiplier); }
   			.row.uniform.\32 5\% { margin: ($c * $multiplier * -1) 0 -1px ($c * $multiplier * -1); }*/
@@ -183,7 +183,7 @@ body {
   			.\33 u\28xlarge\29, .\33 u\24\28xlarge\29 { width: 25%; clear: none; margin-left: 0; }
   			.\32 u\28xlarge\29, .\32 u\24\28xlarge\29 { width: 16.6666666667%; clear: none; margin-left: 0; }
   			.\31 u\28xlarge\29, .\31 u\24\28xlarge\29 { width: 8.3333333333%; clear: none; margin-left: 0; }
-  
+
   			.\31 2u\24\28xlarge\29 + *,
   			.\31 1u\24\28xlarge\29 + *,
   			.\31 0u\24\28xlarge\29 + *,
@@ -233,31 +233,31 @@ body {
 @media screen and (max-width: 1280px) {
   			/*.row > * { padding: ($r * $multiplier) 0 0 ($c * $multiplier); }
   			.row { margin: ($r * $multiplier * -1) 0 -1px ($c * $multiplier * -1); }
-  
+
   		// Uniform.
   			.row.uniform > * { padding: ($c * $multiplier) 0 0 ($c * $multiplier); }
   			.row.uniform { margin: ($c * $multiplier * -1) 0 -1px ($c * $multiplier * -1); }*/
   			/*.row.\32 00\% > * { padding: ($r * $multiplier) 0 0 ($c * $multiplier); }
   			.row.\32 00\% { margin: ($r * $multiplier * -1) 0 -1px ($c * $multiplier * -1); }
-  
+
   		// Uniform.
   			.row.uniform.\32 00\% > * { padding: ($c * $multiplier) 0 0 ($c * $multiplier); }
   			.row.uniform.\32 00\% { margin: ($c * $multiplier * -1) 0 -1px ($c * $multiplier * -1); }*/
   			/*.row.\31 50\% > * { padding: ($r * $multiplier) 0 0 ($c * $multiplier); }
   			.row.\31 50\% { margin: ($r * $multiplier * -1) 0 -1px ($c * $multiplier * -1); }
-  
+
   		// Uniform.
   			.row.uniform.\31 50\% > * { padding: ($c * $multiplier) 0 0 ($c * $multiplier); }
   			.row.uniform.\31 50\% { margin: ($c * $multiplier * -1) 0 -1px ($c * $multiplier * -1); }*/
   			/*.row.\35 0\% > * { padding: ($r * $multiplier) 0 0 ($c * $multiplier); }
   			.row.\35 0\% { margin: ($r * $multiplier * -1) 0 -1px ($c * $multiplier * -1); }
-  
+
   		// Uniform.
   			.row.uniform.\35 0\% > * { padding: ($c * $multiplier) 0 0 ($c * $multiplier); }
   			.row.uniform.\35 0\% { margin: ($c * $multiplier * -1) 0 -1px ($c * $multiplier * -1); }*/
   			/*.row.\32 5\% > * { padding: ($r * $multiplier) 0 0 ($c * $multiplier); }
   			.row.\32 5\% { margin: ($r * $multiplier * -1) 0 -1px ($c * $multiplier * -1); }
-  
+
   		// Uniform.
   			.row.uniform.\32 5\% > * { padding: ($c * $multiplier) 0 0 ($c * $multiplier); }
   			.row.uniform.\32 5\% { margin: ($c * $multiplier * -1) 0 -1px ($c * $multiplier * -1); }*/
@@ -273,7 +273,7 @@ body {
   			.\33 u\28large\29, .\33 u\24\28large\29 { width: 25%; clear: none; margin-left: 0; }
   			.\32 u\28large\29, .\32 u\24\28large\29 { width: 16.6666666667%; clear: none; margin-left: 0; }
   			.\31 u\28large\29, .\31 u\24\28large\29 { width: 8.3333333333%; clear: none; margin-left: 0; }
-  
+
   			.\31 2u\24\28large\29 + *,
   			.\31 1u\24\28large\29 + *,
   			.\31 0u\24\28large\29 + *,
@@ -323,31 +323,31 @@ body {
 @media screen and (max-width: 980px) {
   			/*.row > * { padding: ($r * $multiplier) 0 0 ($c * $multiplier); }
   			.row { margin: ($r * $multiplier * -1) 0 -1px ($c * $multiplier * -1); }
-  
+
   		// Uniform.
   			.row.uniform > * { padding: ($c * $multiplier) 0 0 ($c * $multiplier); }
   			.row.uniform { margin: ($c * $multiplier * -1) 0 -1px ($c * $multiplier * -1); }*/
   			/*.row.\32 00\% > * { padding: ($r * $multiplier) 0 0 ($c * $multiplier); }
   			.row.\32 00\% { margin: ($r * $multiplier * -1) 0 -1px ($c * $multiplier * -1); }
-  
+
   		// Uniform.
   			.row.uniform.\32 00\% > * { padding: ($c * $multiplier) 0 0 ($c * $multiplier); }
   			.row.uniform.\32 00\% { margin: ($c * $multiplier * -1) 0 -1px ($c * $multiplier * -1); }*/
   			/*.row.\31 50\% > * { padding: ($r * $multiplier) 0 0 ($c * $multiplier); }
   			.row.\31 50\% { margin: ($r * $multiplier * -1) 0 -1px ($c * $multiplier * -1); }
-  
+
   		// Uniform.
   			.row.uniform.\31 50\% > * { padding: ($c * $multiplier) 0 0 ($c * $multiplier); }
   			.row.uniform.\31 50\% { margin: ($c * $multiplier * -1) 0 -1px ($c * $multiplier * -1); }*/
   			/*.row.\35 0\% > * { padding: ($r * $multiplier) 0 0 ($c * $multiplier); }
   			.row.\35 0\% { margin: ($r * $multiplier * -1) 0 -1px ($c * $multiplier * -1); }
-  
+
   		// Uniform.
   			.row.uniform.\35 0\% > * { padding: ($c * $multiplier) 0 0 ($c * $multiplier); }
   			.row.uniform.\35 0\% { margin: ($c * $multiplier * -1) 0 -1px ($c * $multiplier * -1); }*/
   			/*.row.\32 5\% > * { padding: ($r * $multiplier) 0 0 ($c * $multiplier); }
   			.row.\32 5\% { margin: ($r * $multiplier * -1) 0 -1px ($c * $multiplier * -1); }
-  
+
   		// Uniform.
   			.row.uniform.\32 5\% > * { padding: ($c * $multiplier) 0 0 ($c * $multiplier); }
   			.row.uniform.\32 5\% { margin: ($c * $multiplier * -1) 0 -1px ($c * $multiplier * -1); }*/
@@ -363,7 +363,7 @@ body {
   			.\33 u\28medium\29, .\33 u\24\28medium\29 { width: 25%; clear: none; margin-left: 0; }
   			.\32 u\28medium\29, .\32 u\24\28medium\29 { width: 16.6666666667%; clear: none; margin-left: 0; }
   			.\31 u\28medium\29, .\31 u\24\28medium\29 { width: 8.3333333333%; clear: none; margin-left: 0; }
-  
+
   			.\31 2u\24\28medium\29 + *,
   			.\31 1u\24\28medium\29 + *,
   			.\31 0u\24\28medium\29 + *,
@@ -413,31 +413,31 @@ body {
 @media screen and (max-width: 736px) {
   			/*.row > * { padding: ($r * $multiplier) 0 0 ($c * $multiplier); }
   			.row { margin: ($r * $multiplier * -1) 0 -1px ($c * $multiplier * -1); }
-  
+
   		// Uniform.
   			.row.uniform > * { padding: ($c * $multiplier) 0 0 ($c * $multiplier); }
   			.row.uniform { margin: ($c * $multiplier * -1) 0 -1px ($c * $multiplier * -1); }*/
   			/*.row.\32 00\% > * { padding: ($r * $multiplier) 0 0 ($c * $multiplier); }
   			.row.\32 00\% { margin: ($r * $multiplier * -1) 0 -1px ($c * $multiplier * -1); }
-  
+
   		// Uniform.
   			.row.uniform.\32 00\% > * { padding: ($c * $multiplier) 0 0 ($c * $multiplier); }
   			.row.uniform.\32 00\% { margin: ($c * $multiplier * -1) 0 -1px ($c * $multiplier * -1); }*/
   			/*.row.\31 50\% > * { padding: ($r * $multiplier) 0 0 ($c * $multiplier); }
   			.row.\31 50\% { margin: ($r * $multiplier * -1) 0 -1px ($c * $multiplier * -1); }
-  
+
   		// Uniform.
   			.row.uniform.\31 50\% > * { padding: ($c * $multiplier) 0 0 ($c * $multiplier); }
   			.row.uniform.\31 50\% { margin: ($c * $multiplier * -1) 0 -1px ($c * $multiplier * -1); }*/
   			/*.row.\35 0\% > * { padding: ($r * $multiplier) 0 0 ($c * $multiplier); }
   			.row.\35 0\% { margin: ($r * $multiplier * -1) 0 -1px ($c * $multiplier * -1); }
-  
+
   		// Uniform.
   			.row.uniform.\35 0\% > * { padding: ($c * $multiplier) 0 0 ($c * $multiplier); }
   			.row.uniform.\35 0\% { margin: ($c * $multiplier * -1) 0 -1px ($c * $multiplier * -1); }*/
   			/*.row.\32 5\% > * { padding: ($r * $multiplier) 0 0 ($c * $multiplier); }
   			.row.\32 5\% { margin: ($r * $multiplier * -1) 0 -1px ($c * $multiplier * -1); }
-  
+
   		// Uniform.
   			.row.uniform.\32 5\% > * { padding: ($c * $multiplier) 0 0 ($c * $multiplier); }
   			.row.uniform.\32 5\% { margin: ($c * $multiplier * -1) 0 -1px ($c * $multiplier * -1); }*/
@@ -453,7 +453,7 @@ body {
   			.\33 u\28small\29, .\33 u\24\28small\29 { width: 25%; clear: none; margin-left: 0; }
   			.\32 u\28small\29, .\32 u\24\28small\29 { width: 16.6666666667%; clear: none; margin-left: 0; }
   			.\31 u\28small\29, .\31 u\24\28small\29 { width: 8.3333333333%; clear: none; margin-left: 0; }
-  
+
   			.\31 2u\24\28small\29 + *,
   			.\31 1u\24\28small\29 + *,
   			.\31 0u\24\28small\29 + *,
@@ -503,31 +503,31 @@ body {
 @media screen and (max-width: 480px) {
   			/*.row > * { padding: ($r * $multiplier) 0 0 ($c * $multiplier); }
   			.row { margin: ($r * $multiplier * -1) 0 -1px ($c * $multiplier * -1); }
-  
+
   		// Uniform.
   			.row.uniform > * { padding: ($c * $multiplier) 0 0 ($c * $multiplier); }
   			.row.uniform { margin: ($c * $multiplier * -1) 0 -1px ($c * $multiplier * -1); }*/
   			/*.row.\32 00\% > * { padding: ($r * $multiplier) 0 0 ($c * $multiplier); }
   			.row.\32 00\% { margin: ($r * $multiplier * -1) 0 -1px ($c * $multiplier * -1); }
-  
+
   		// Uniform.
   			.row.uniform.\32 00\% > * { padding: ($c * $multiplier) 0 0 ($c * $multiplier); }
   			.row.uniform.\32 00\% { margin: ($c * $multiplier * -1) 0 -1px ($c * $multiplier * -1); }*/
   			/*.row.\31 50\% > * { padding: ($r * $multiplier) 0 0 ($c * $multiplier); }
   			.row.\31 50\% { margin: ($r * $multiplier * -1) 0 -1px ($c * $multiplier * -1); }
-  
+
   		// Uniform.
   			.row.uniform.\31 50\% > * { padding: ($c * $multiplier) 0 0 ($c * $multiplier); }
   			.row.uniform.\31 50\% { margin: ($c * $multiplier * -1) 0 -1px ($c * $multiplier * -1); }*/
   			/*.row.\35 0\% > * { padding: ($r * $multiplier) 0 0 ($c * $multiplier); }
   			.row.\35 0\% { margin: ($r * $multiplier * -1) 0 -1px ($c * $multiplier * -1); }
-  
+
   		// Uniform.
   			.row.uniform.\35 0\% > * { padding: ($c * $multiplier) 0 0 ($c * $multiplier); }
   			.row.uniform.\35 0\% { margin: ($c * $multiplier * -1) 0 -1px ($c * $multiplier * -1); }*/
   			/*.row.\32 5\% > * { padding: ($r * $multiplier) 0 0 ($c * $multiplier); }
   			.row.\32 5\% { margin: ($r * $multiplier * -1) 0 -1px ($c * $multiplier * -1); }
-  
+
   		// Uniform.
   			.row.uniform.\32 5\% > * { padding: ($c * $multiplier) 0 0 ($c * $multiplier); }
   			.row.uniform.\32 5\% { margin: ($c * $multiplier * -1) 0 -1px ($c * $multiplier * -1); }*/
@@ -543,7 +543,7 @@ body {
   			.\33 u\28xsmall\29, .\33 u\24\28xsmall\29 { width: 25%; clear: none; margin-left: 0; }
   			.\32 u\28xsmall\29, .\32 u\24\28xsmall\29 { width: 16.6666666667%; clear: none; margin-left: 0; }
   			.\31 u\28xsmall\29, .\31 u\24\28xsmall\29 { width: 8.3333333333%; clear: none; margin-left: 0; }
-  
+
   			.\31 2u\24\28xsmall\29 + *,
   			.\31 1u\24\28xsmall\29 + *,
   			.\31 0u\24\28xsmall\29 + *,
@@ -697,7 +697,6 @@ a {
     border-bottom-color: transparent; }
 
 strong, b {
-  color: #f5f5f5;
   font-weight: 600; }
 
 em, i {
@@ -1537,12 +1536,12 @@ input[type="button"],
     			input[type="radio"], {
     				& + label {
     					color: _palette($p, fg);
-    
+
     					&:before {
     						background: _palette($p, border-bg);
     					}
     				}
-    
+
     				&:checked + label {
     					&:before {
     						background: _palette($p, fg-bold);
@@ -1632,12 +1631,12 @@ input[type="button"],
     			input[type="radio"], {
     				& + label {
     					color: _palette($p, fg);
-    
+
     					&:before {
     						background: _palette($p, border-bg);
     					}
     				}
-    
+
     				&:checked + label {
     					&:before {
     						background: _palette($p, fg-bold);
@@ -1726,12 +1725,12 @@ input[type="button"],
     			input[type="radio"], {
     				& + label {
     					color: _palette($p, fg);
-    
+
     					&:before {
     						background: _palette($p, border-bg);
     					}
     				}
-    
+
     				&:checked + label {
     					&:before {
     						background: _palette($p, fg-bold);
@@ -1821,12 +1820,12 @@ input[type="button"],
     			input[type="radio"], {
     				& + label {
     					color: _palette($p, fg);
-    
+
     					&:before {
     						background: _palette($p, border-bg);
     					}
     				}
-    
+
     				&:checked + label {
     					&:before {
     						background: _palette($p, fg-bold);
@@ -1934,12 +1933,12 @@ input[type="button"],
     			input[type="radio"], {
     				& + label {
     					color: _palette($p, fg);
-    
+
     					&:before {
     						background: _palette($p, border-bg);
     					}
     				}
-    
+
     				&:checked + label {
     					&:before {
     						background: _palette($p, fg-bold);
@@ -2029,12 +2028,12 @@ input[type="button"],
     			input[type="radio"], {
     				& + label {
     					color: _palette($p, fg);
-    
+
     					&:before {
     						background: _palette($p, border-bg);
     					}
     				}
-    
+
     				&:checked + label {
     					&:before {
     						background: _palette($p, fg-bold);
@@ -2124,12 +2123,12 @@ input[type="button"],
     			input[type="radio"], {
     				& + label {
     					color: _palette($p, fg);
-    
+
     					&:before {
     						background: _palette($p, border-bg);
     					}
     				}
-    
+
     				&:checked + label {
     					&:before {
     						background: _palette($p, fg-bold);
@@ -2219,12 +2218,12 @@ input[type="button"],
     			input[type="radio"], {
     				& + label {
     					color: _palette($p, fg);
-    
+
     					&:before {
     						background: _palette($p, border-bg);
     					}
     				}
-    
+
     				&:checked + label {
     					&:before {
     						background: _palette($p, fg-bold);
@@ -2332,12 +2331,12 @@ input[type="button"],
     			input[type="radio"], {
     				& + label {
     					color: _palette($p, fg);
-    
+
     					&:before {
     						background: _palette($p, border-bg);
     					}
     				}
-    
+
     				&:checked + label {
     					&:before {
     						background: _palette($p, fg-bold);
@@ -2427,12 +2426,12 @@ input[type="button"],
     			input[type="radio"], {
     				& + label {
     					color: _palette($p, fg);
-    
+
     					&:before {
     						background: _palette($p, border-bg);
     					}
     				}
-    
+
     				&:checked + label {
     					&:before {
     						background: _palette($p, fg-bold);
@@ -2522,12 +2521,12 @@ input[type="button"],
     			input[type="radio"], {
     				& + label {
     					color: _palette($p, fg);
-    
+
     					&:before {
     						background: _palette($p, border-bg);
     					}
     				}
-    
+
     				&:checked + label {
     					&:before {
     						background: _palette($p, fg-bold);
@@ -2635,12 +2634,12 @@ input[type="button"],
     			input[type="radio"], {
     				& + label {
     					color: _palette($p, fg);
-    
+
     					&:before {
     						background: _palette($p, border-bg);
     					}
     				}
-    
+
     				&:checked + label {
     					&:before {
     						background: _palette($p, fg-bold);
@@ -2730,12 +2729,12 @@ input[type="button"],
     			input[type="radio"], {
     				& + label {
     					color: _palette($p, fg);
-    
+
     					&:before {
     						background: _palette($p, border-bg);
     					}
     				}
-    
+
     				&:checked + label {
     					&:before {
     						background: _palette($p, fg-bold);
@@ -2825,12 +2824,12 @@ input[type="button"],
     			input[type="radio"], {
     				& + label {
     					color: _palette($p, fg);
-    
+
     					&:before {
     						background: _palette($p, border-bg);
     					}
     				}
-    
+
     				&:checked + label {
     					&:before {
     						background: _palette($p, fg-bold);

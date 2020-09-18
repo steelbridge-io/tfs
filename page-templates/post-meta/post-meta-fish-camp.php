@@ -23,6 +23,7 @@ $video_fcfeature_two 										= get_post_meta(get_the_ID(), 'feature-fc2-video'
 $feature_fc2_image											= get_post_meta(get_the_ID(), 'feature-fc2-image', true);
 $feature_fc2_title                  		= get_post_meta(get_the_ID(), 'feature-fc2-title', true);
 $feature_fc2_seasons_textarea       		= get_post_meta(get_the_ID(), 'feature-fc2-seasons-textarea', true);
+$feature_fc2_readmore_info              = get_post_meta(get_the_ID(), 'feature-fc2-readmore-info', true);
 $feature_fc2_readmore_textarea					= get_post_meta(get_the_ID(), 'feature-fc2-readmore-textarea', true);
 
 $video_fcfeature_three 									= get_post_meta(get_the_ID(), 'feature-fc3-video', true);
@@ -30,18 +31,21 @@ $feature_fc3_fishing_image							= get_post_meta(get_the_ID(), 'feature-fc3-imag
 
 $feature_fcfive_title										= get_post_meta(get_the_ID(), 'feature-fcfive-title', true);
 $feature_fcfive_textarea								= get_post_meta(get_the_ID(), 'feature-fcfive-textarea', true);
+$feature_fcfive_readmore_info           = get_post_meta(get_the_ID(), 'feature-fcfive-readmore-info', true);
 $feature_fcfive_readmore_textarea				= get_post_meta(get_the_ID(), 'feature-fcfive-readmore-textarea', true);
 
-$video_fcfeature_four 									= get_post_meta(get_the_ID(), 'feature-fc4-video', true);	
+$video_fcfeature_four 									= get_post_meta(get_the_ID(), 'feature-fc4-video', true);
 $feature_fc4_image											= get_post_meta(get_the_ID(), 'feature-fc4-image', true);
 $feature_4_fclodging_title							= get_post_meta(get_the_ID(), 'feature-fc4-title', true);
 $feature_4_fclodging_content						= get_post_meta(get_the_ID(), 'feature-fc4-gettingto-textarea', true);
+$feature_fc4_readmore_info              = get_post_meta(get_the_ID(), 'feature-fc4-readmore-info', true);
 $feature_4_fclodging_readmore						= get_post_meta(get_the_ID(), 'feature-fc4-readmore-textarea', true);
 
 $video_fcfeature_five										= get_post_meta(get_the_ID(), 'feature-fc5-video', true);
 $feature_fc5_image											= get_post_meta(get_the_ID(), 'feature-fc5-image', true );
 $feature_fc5_get_to_title								= get_post_meta(get_the_ID(), 'feature-fc3-title', true);
 $feature_fc5_get_to_content							= get_post_meta(get_the_ID(), 'feature-fc3-gettingto-textarea', true );
+$feature_fc3_readmore_info              = get_post_meta(get_the_ID(), 'feature-fc3-readmore-info', true );
 $feature_fc5_get_to_readmore						= get_post_meta(get_the_ID(), 'feature-fc3-readmore-textarea', true );
 
 $fish_camp_additional_info_image1					= get_post_meta(get_the_ID(), 'fish-camp-additional-info-image1', true);

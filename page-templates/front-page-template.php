@@ -57,12 +57,12 @@ get_header(); ?>
                           '<div class="media">' .
                             '<div class="col-lg-4">' .
                             '<div class="media-left media-top">' .
-                              get_the_post_thumbnail( get_the_id());
+                              '<a href="'. get_permalink() .'" title="' . get_the_title() . '">' . get_the_post_thumbnail( get_the_id()) . '</a>';
                   echo     '</div>' .
                           '</div>' .
                         '<div class="col-lg-8">' .
                           '<div class="media-body caption">';
-                            the_title('<a class="post-permalink" href="'. get_permalink() .'"><h3>', '</h3></a>');
+                            the_title('<a class="post-permalink" title="'. get_the_title() .'" href="'. get_permalink() .'"><h3>', '</h3></a>');
                   echo      '<b>' . get_the_date( 'F dS, Y', get_the_ID()) . '</b>';
                               the_excerpt();
                   echo    '</div>
@@ -209,7 +209,7 @@ get_header(); ?>
       <div class="blog-well well">
         <h2>N. California Fly Fishing News</h2>
         <hr/>
-        <div class="row">
+        <div class="row nc-fly-fishing-news">
           <?php
           $args = array( 'post_type' => 'post', 'post_status' => 'publish', 'posts_per_page' => 2 );
           $loop = new WP_Query($args);

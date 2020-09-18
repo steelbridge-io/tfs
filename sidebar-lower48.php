@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The sidebar containing the main widget area.
  *
@@ -7,11 +8,12 @@
  * @package The_Fly_Shop
  */
 
-if ( ! is_active_sidebar( 'sidebar-3' ) ) {
-	return;
+if ( ! is_active_sidebar( 'sidebar-4' ) ) {
+  return;
 }
 ?>
 
-<aside id="outfitter-sidebar" class="widget-area" role="complementary">
-	<?php dynamic_sidebar( 'sidebar-3' ); ?>
+<aside id="lower48-sidebar" class="widget-area" role="complementary">
+  <?php dynamic_sidebar( 'sidebar-4' ); ?>
 </aside><!-- #secondary -->
+
