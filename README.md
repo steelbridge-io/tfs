@@ -1,3 +1,3 @@
 # TFS Theme
 
-A custom theme for TFS. Dependednt on custom plugins.
+A custom theme for TFS. Dependent on custom plugins.
