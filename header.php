@@ -49,8 +49,8 @@ $tfs_metatags    = get_post_meta(get_the_ID(), 'seotfs-meta-tags', true);
 
 </head>
 
-
 <!--<body class="landing">-->
+
 <?php echo '<body class="scroll landing archivetemplate stream-report travel-destination outfitters-dept private-waters schools-template fish-camp-template default-template non-banner-loading '.join(' ', get_body_class()).'">'.PHP_EOL; ?>
 <div class="container-fluid">
   
