@@ -15,10 +15,12 @@
 AOS.init({
     animatedClassName: 'aos-animate', // class applied on animation
     useClassNames: true,
-    delay: 1500, // values from 0 to 3000, with step 50ms
-    duration: 1500, // values from 0 to 3000, with step 50ms
+    delay: 900, // values from 0 to 3000, with step 50ms
+    duration: 1200, // values from 0 to 3000, with step 50ms
     easing: 'ease', // default easing for AOS animations
 });
+
+AOS.refresh();
 
 // When the user scrolls down 50px from the top of the document, resize the header's font size
 window.onscroll = function() {scrollFunction()};
@@ -28,7 +30,7 @@ function scrollFunction() {
         document.getElementById("news-cta").style.maxHeight = "1200px";
         document.getElementById("news-cta").style.height = "auto";
         document.getElementById("news-cta").style.backgroundColor = "black";
-        document.getElementById("news-cta").style.transition = "max-height 1.5s ease-out";
+        document.getElementById("news-cta").style.transition = "max-height 1.3s ease-out";
     } else {
         var a = document.getElementById('news-cta');
         if (typeof(a) != 'undefined' && a != null) {

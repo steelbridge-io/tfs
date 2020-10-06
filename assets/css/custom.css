@@ -691,7 +691,7 @@ p.template-description {
 }
 #blog-feed-fp-top .newscta {
   text-align: center;
-  overflow: auto;
+  overflow: hidden;
 }
 
 #main .archive.content-area.row .col-md-4 article {
@@ -2447,7 +2447,7 @@ h2.content-title {
 }
 
 .mb-1618 {
-  margin: 0 0 1.618em 0;
+  margin-bottom: 1.618em;
 }
 
 .mb-2618 {
