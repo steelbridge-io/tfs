@@ -646,3 +646,11 @@ function country_redirect()
 }
 
 
+
+function prefix_conditional_body_class( $classes ) {
+  if( is_page_template('page-templates/blog-template-basic.php') )
+    $classes[] = 'blog-template-class';
+  
+  return $classes;
+}
+add_filter( 'body_class', 'prefix_conditional_body_class' );
