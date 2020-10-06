@@ -143,7 +143,7 @@ get_header();
         
         </main>
         
-        <div class="col-md-3 col-sm-offset-1">
+        <div class="basic-blog-temp-sidebar col-md-3 col-sm-offset-1">
           <?php get_sidebar(); ?>
         </div>
       </div>
