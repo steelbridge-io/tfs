@@ -31,7 +31,7 @@ function scrollFunction() {
         document.getElementById("news-cta").style.height = "auto";
         document.getElementById("news-cta").style.backgroundColor = "black";
         document.getElementById("news-cta").style.transition = "max-height 1.3s ease-out";
-    } else {
+    } else if (x.matches) {
         var a = document.getElementById('news-cta');
         if (typeof(a) != 'undefined' && a != null) {
             a.style.maxHeight = "0px";
@@ -40,8 +40,14 @@ function scrollFunction() {
         if (typeof(b) != 'undefined' && a != null) {
             b.style.backgroundColor = "none";
         }
+    } else {
+        '';
     }
 }
+
+var x = window.matchMedia("(min-width: 1024px)")
+scrollFunction(x) // Call listener function at run time
+x.addListener(scrollFunction) // Attach listener function on state changes
 
 (function(d) {
     var g = -1,

@@ -54,6 +54,12 @@
   .media:nth-child(n+1) {
     padding-top: $p1;
   }
+  .desktop {
+    display: initial;
+  }
+  .mobile {
+    display: none;
+  }
 }
 
 // Large devices (desktops, 992px and up)
@@ -69,6 +75,12 @@
 @media (max-width: 767.98px) {
   .media {
     padding-top: $p1;
+  }
+  .desktop {
+    display: none;
+  }
+  .mobile {
+    display: initial;
   }
 }
 

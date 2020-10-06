@@ -2367,10 +2367,26 @@ nav.navigation.post-navigation .polls.nav-previous .fa-chevron-left {
   .media:nth-child(n+1) {
     padding-top: 1em;
   }
+
+  .desktop {
+    display: initial;
+  }
+
+  .mobile {
+    display: none;
+  }
 }
 @media (max-width: 767.98px) {
   .media {
     padding-top: 1em;
+  }
+
+  .desktop {
+    display: none;
+  }
+
+  .mobile {
+    display: initial;
   }
 }
 /* SCSS For Taxonomy Archives
@@ -2404,18 +2420,6 @@ nav.navigation.post-navigation .polls.nav-previous .fa-chevron-left {
     align-items: center;
   }
 }
-/* SCSS for content.php template part
------------------------------------------ */
-#content-template-part-content .content-part p {
-  margin-bottom: 0;
-}
-
-h2.content-title {
-  font-size: 1.5rem;
-  line-height: 1em;
-  margin-bottom: 0.5em;
-}
-
 /* SCSS for content.php template part
 ----------------------------------------- */
 #content-template-part-content .content-part p {
