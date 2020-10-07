@@ -2499,8 +2499,7 @@ h2.content-title {
 ------------------------------- */
 #menu-primary li.menu-item .navbar-form {
   padding: 10px 0;
-  display: inline-flex;
-  flex-wrap: wrap;
+  width: 100%;
 }
 #menu-primary li.menu-item .navbar-form .btn-default {
   border: 1px solid #f5f5f5;

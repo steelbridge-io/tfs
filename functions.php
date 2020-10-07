@@ -582,7 +582,7 @@ add_filter( 'excerpt_length', 'custom_excerpt_length' );
 
 function custom_excerpt_length( $length ) {
   
-  $length = in_category('blog') ? '50' : '35';
+  $length = in_category('blog') ? '20' : '20';
   
   return $length;
   

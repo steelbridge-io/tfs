@@ -156,15 +156,6 @@ get_header(); ?>
                 endwhile;
                 wp_reset_postdata(); ?>
               </div>
-              
-              
-              
-              
-              
-              
-              
-              
-              
             </div>
             <div class="mb-2618">
             <a href="/travelblog-category/travel-blog"><button type="button" class="blog-read-more btn btn-red">Read More News Here</button></a>

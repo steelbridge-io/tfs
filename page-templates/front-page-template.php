@@ -206,12 +206,14 @@ get_header(); ?>
           </div>
         </div>
       </div>
-      <div class="blog-well well">
+     <!--
+     --- Might use later ---
+     <div class="blog-well well">
         <h2>N. California Fly Fishing News</h2>
         <hr/>
         <div class="row nc-fly-fishing-news">
-          <?php
-          $args = array( 'post_type' => 'post', 'post_status' => 'publish', 'posts_per_page' => 2 );
+         
+         /* $args = array( 'post_type' => 'post', 'post_status' => 'publish', 'posts_per_page' => 2 );
           $loop = new WP_Query($args);
           while ( $loop->have_posts() ) : $loop->the_post();
             echo '<div class="col-md-6"><div class="inner-wrap">';
@@ -222,9 +224,9 @@ get_header(); ?>
             the_excerpt();
             echo '</div></div></div>';
           endwhile;
-          wp_reset_postdata(); ?>
+          wp_reset_postdata(); */
         </div>
-      </div>
+      </div> -->
     </div> <!--</section>-->
     
     <!-- === FLIP PAGE SECTION === -->
