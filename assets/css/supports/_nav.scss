@@ -4,8 +4,7 @@
   li.menu-item {
     .navbar-form {
       padding: 10px 0;
-      display: inline-flex;
-      flex-wrap: wrap;
+      width: 100%;
 
       .btn-default {
         border: 1px solid $white;
