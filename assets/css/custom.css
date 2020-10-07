@@ -2514,4 +2514,23 @@ h2.content-title {
   box-shadow: none;
 }
 
+/** SCSS Search Results
+------------------------------------------- */
+.content-area.search-results {
+  padding: 1.618em;
+}
+
+.page-header.search-results {
+  margin-top: 2.618em;
+}
+.page-header.search-results h1 {
+  font-size: 2rem;
+}
+
+.search-logo-wrap {
+  background-color: #f5f5f5;
+  padding: 1.618em;
+  margin-bottom: 2.618em;
+}
+
 /*# sourceMappingURL=custom.css.map */

@@ -9,13 +9,19 @@
 
 get_header(); ?>
 
-	<section id="primary" class="content-area">
+	<section id="primary" class="content-area search-results">
+      <div class="col-12 search-logo-wrap">
+      <img src="https://tfs-spaces.sfo2.digitaloceanspaces.com/theflyshop/uploads/2020/09/TFS_logo94x272.png" class="img-responsive" alt="The Fly Shop Logo">
+      </div>
+      
+      <div class="row">
+        <div class="col-md-8">
 		<main id="main" class="site-main" role="main">
 
 		<?php
 		if ( have_posts() ) : ?>
 
-			<header class="page-header">
+			<header class="page-header search-results">
 				<h1 class="page-title"><?php printf( esc_html__( 'Search Results for: %s', 'the-fly-shop' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
 			</header><!-- .page-header -->
 
@@ -41,8 +47,12 @@ get_header(); ?>
 		endif; ?>
 
 		</main><!-- #main -->
+      </div>
+        <div class="col-md-3 col-md-offset-1">
+          <?php get_sidebar(); ?>
+        </div>
+      </div>
 	</section><!-- #primary -->
 
 <?php
-get_sidebar();
 get_footer();

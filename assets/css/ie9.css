@@ -75,7 +75,6 @@
   background-size: cover;
   position: relative; }
   #main > header:before {
-    background: #000000;
     content: '';
     height: 100%;
     left: 0;
