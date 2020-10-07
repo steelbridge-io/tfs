@@ -15,39 +15,42 @@
 AOS.init({
     animatedClassName: 'aos-animate', // class applied on animation
     useClassNames: true,
-    delay: 900, // values from 0 to 3000, with step 50ms
-    duration: 1200, // values from 0 to 3000, with step 50ms
+    delay: 1100, // values from 0 to 3000, with step 50ms
+    duration: 1500, // values from 0 to 3000, with step 50ms
     easing: 'ease', // default easing for AOS animations
 });
 
-AOS.refresh();
-
 // When the user scrolls down 50px from the top of the document, resize the header's font size
+
+var x = window.matchMedia("(min-width: 991.98px)")
+scrollFunction(x) // Call listener function at run time
+x.addListener(scrollFunction) // Attach listener function on state changes
+
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
-    if (document.body.scrollTop > 350 || document.documentElement.scrollTop > 350) {
-        document.getElementById("news-cta").style.maxHeight = "1200px";
+
+    if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+        document.getElementById("news-cta").style.maxHeight = "2800px";
         document.getElementById("news-cta").style.height = "auto";
         document.getElementById("news-cta").style.backgroundColor = "black";
-        document.getElementById("news-cta").style.transition = "max-height 1.3s ease-out";
+        document.getElementById("news-cta").style.transition = "max-height 1.5s ease-out";
     } else if (x.matches) {
         var a = document.getElementById('news-cta');
         if (typeof(a) != 'undefined' && a != null) {
             a.style.maxHeight = "0px";
         }
-        var b = document.getElementById("news-cta");
+        var b = document.getElementById('news-cta');
         if (typeof(b) != 'undefined' && a != null) {
-            b.style.backgroundColor = "none";
+            b.style.backgroundColor = "#000";
         }
     } else {
-        '';
+        var b = document.getElementById('news-cta');
+        if (typeof(b) != 'undefined' && a != null) {
+            b.style.backgroundColor = "#000";
+        }
     }
 }
-
-var x = window.matchMedia("(min-width: 1024px)")
-scrollFunction(x) // Call listener function at run time
-x.addListener(scrollFunction) // Attach listener function on state changes
 
 (function(d) {
     var g = -1,

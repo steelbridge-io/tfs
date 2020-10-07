@@ -1,0 +1,26 @@
+/* SCSS Nav styles
+------------------------------- */
+#menu-primary {
+  li.menu-item {
+    .navbar-form {
+      padding: 10px 0;
+      display: inline-flex;
+      flex-wrap: wrap;
+
+      .btn-default {
+        border: 1px solid $white;
+        background-color: $tfsred;
+        border-radius: 0;
+        color: $grey;
+      }
+
+      .form-group {
+        .form-control {
+          border: 1px solid $white;
+          border-radius: 0;
+          box-shadow: none;
+        }
+      }
+    }
+  }
+}

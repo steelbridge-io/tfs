@@ -144,7 +144,7 @@ $tfs_metatags    = get_post_meta(get_the_ID(), 'seotfs-meta-tags', true);
                                       // This loads the custom menu from your wordpress dashboard
                                       wp_nav_menu( array(
                                         'theme_location'		=> 'primary',
-                                        'container'					=> 'div',
+                                        'container'				=> 'div',
                                         'container_id'			=> 'menu'
                                       ));
                                       ?>
@@ -154,5 +154,3 @@ $tfs_metatags    = get_post_meta(get_the_ID(), 'seotfs-meta-tags', true);
                                 </nav>
                               
                               </header>
-
-

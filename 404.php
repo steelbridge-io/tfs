@@ -9,11 +9,12 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
+	<div id="primary" class="content-area container">
 		<main id="main" class="site-main" role="main">
 
 			<section class="error-404 not-found">
 				<header class="page-header">
+                  <img src="https://tfs-spaces.sfo2.digitaloceanspaces.com/theflyshop/uploads/2020/09/TFS_logo94x272.png" class="img-responsive display-block">
 					<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'the-fly-shop' ); ?></h1>
 				</header><!-- .page-header -->
 
