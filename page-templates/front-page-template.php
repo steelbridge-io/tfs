@@ -43,11 +43,11 @@ get_header(); ?>
           </div>
         </form>
       </div>
-      <div id="blog-feed-fp-top" class="container-fluid mb-1618">
+      <div id="blog-feed-fp-top" class="container-fluid mb-1618 mt-1">
         <div class="row">
           <div class="newscta" id="news-cta">
-            <div data-aos-duration="2000" data-aos="fade-up" class="news-section">
-              <div style="padding-top:1.1rem;">
+            <div data-aos-duration="1000" data-aos="fade-up" class="news-section">
+              <div>
                 <h2>Latest News - The Fly Shop</h2>
                 <?php
                 $args = array( 'post_type' => 'post', 'post_status' => 'publish', 'posts_per_page' => 2 );

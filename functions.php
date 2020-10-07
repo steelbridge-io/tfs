@@ -15,6 +15,7 @@ include_once 'inc/gutenberg.php';
 include_once 'inc/author.php';
 include_once 'inc/author-img/custom-author-image.php';
 include_once 'inc/blog/blog-template-css.php';
+include_once 'library/shortcodes.php';
 
 /**
  * Customizer additions.

@@ -97,13 +97,13 @@ get_header(); ?>
         <div class="row">
           <div class="newscta" id="news-cta">
             <div data-aos-duration="2000" data-aos="fade-up" class="news-section">
-              <div class="mt-2618 mb-2618">
+              <div class="mt-2618 mb-2618 desktop">
                 <h2>Latest Travel News</h2>
                 <?php
-                $args = array(
-                  'post_type'       => 'travel-blog',
-                  'post_status'     => 'publish',
-                  'posts_per_page'  => 4 );
+                    $args = array(
+                      'post_type' => 'travel-blog',
+                      'post_status' => 'publish',
+                      'posts_per_page' => 4 );
                 
                 $loop = new WP_Query($args);
                 while ( $loop->have_posts() ) : $loop->the_post();
@@ -126,6 +126,45 @@ get_header(); ?>
                 endwhile;
                 wp_reset_postdata(); ?>
               </div>
+              
+              <div class="mt-2618 mb-2618 mobile">
+                <h2>Latest Travel News</h2>
+                <?php
+                $args = array(
+                  'post_type' => 'travel-blog',
+                  'post_status' => 'publish',
+                  'posts_per_page' => 1 );
+    
+                $loop = new WP_Query($args);
+                while ( $loop->have_posts() ) : $loop->the_post();
+                  echo '<div class="col-md-6">' .
+                    '<div class="media">' .
+                    '<div class="col-lg-4">' .
+                    '<div class="media-left media-top">' .
+                    '<a href="'. get_permalink() .'" title="'. get_the_title() .'">' . get_the_post_thumbnail( get_the_id()) . '</a>';
+                  echo  '</div>' .
+                    '</div>' .
+                    '<div class="col-lg-8">' .
+                    '<div class="media-body caption">';
+                  the_title('<a class="post-permalink" title="'. get_the_title() .'" href="'. get_permalink() .'"><h3>', '</h3></a>');
+                  echo  '<b>' . get_the_date( 'F dS, Y', get_the_ID()) . '</b>';
+                  the_excerpt();
+                  echo  '</div>
+                     </div>
+                     </div>
+                     </div>';
+                endwhile;
+                wp_reset_postdata(); ?>
+              </div>
+              
+              
+              
+              
+              
+              
+              
+              
+              
             </div>
             <div class="mb-2618">
             <a href="/travelblog-category/travel-blog"><button type="button" class="blog-read-more btn btn-red">Read More News Here</button></a>

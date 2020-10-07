@@ -601,7 +601,7 @@ p.template-description {
   }
   .newscta {
     text-align:center;
-    overflow:auto;
+    overflow: hidden;
   }
 }
 
@@ -2100,6 +2100,8 @@ nav.navigation.post-navigation {
 @import 'supports/travel-signature-template';
 @import 'supports/taxonomy-archive';
 @import 'supports/content';
-@import 'supports/content';
 @import 'supports/margin-padding';
+@import 'supports/404';
+@import 'supports/nav';
+@import 'supports/search-results';
 

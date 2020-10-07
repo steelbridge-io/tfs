@@ -691,7 +691,7 @@ p.template-description {
 }
 #blog-feed-fp-top .newscta {
   text-align: center;
-  overflow: auto;
+  overflow: hidden;
 }
 
 #main .archive.content-area.row .col-md-4 article {
@@ -2320,8 +2320,12 @@ nav.navigation.post-navigation .polls.nav-previous .fa-chevron-left {
 
 /** SCSS for Travel Signature Template
 ----------------------------------------- */
+#travel-signature-template {
+  background-color: #000000;
+}
 #travel-signature-template h2 {
   color: var(--white);
+  padding-top: 1.618em;
 }
 #travel-signature-template h3 {
   margin-bottom: 0;
@@ -2352,8 +2356,7 @@ nav.navigation.post-navigation .polls.nav-previous .fa-chevron-left {
 }
 #travel-signature-template .newscta {
   text-align: center;
-  overflow: auto;
-  /*padding: $p1618 $p1618 $p3;*/
+  overflow: hidden;
 }
 
 .blog-read-more.btn.btn-red {
@@ -2368,9 +2371,30 @@ nav.navigation.post-navigation .polls.nav-previous .fa-chevron-left {
     padding-top: 1em;
   }
 }
-@media (max-width: 767.98px) {
+@media (min-width: 992px) {
+  .desktop {
+    display: initial;
+  }
+
+  .mobile {
+    display: none;
+  }
+}
+@media (max-width: 991.98px) {
+  .blog-read-more.btn.btn-red {
+    margin-top: 1.618em;
+  }
+
   .media {
     padding-top: 1em;
+  }
+
+  .desktop {
+    display: none;
+  }
+
+  .mobile {
+    display: initial;
   }
 }
 /* SCSS For Taxonomy Archives
@@ -2416,18 +2440,6 @@ h2.content-title {
   margin-bottom: 0.5em;
 }
 
-/* SCSS for content.php template part
------------------------------------------ */
-#content-template-part-content .content-part p {
-  margin-bottom: 0;
-}
-
-h2.content-title {
-  font-size: 1.5rem;
-  line-height: 1em;
-  margin-bottom: 0.5em;
-}
-
 /* SCSS Margins Padding
 -------------------------------- */
 .mt-1618 {
@@ -2447,7 +2459,7 @@ h2.content-title {
 }
 
 .mb-1618 {
-  margin: 0 0 1.618em 0;
+  margin-bottom: 1.618em;
 }
 
 .mb-2618 {
@@ -2472,6 +2484,53 @@ h2.content-title {
 
 .no-margin-bottom {
   margin-bottom: 0 !important;
+}
+
+/** SCSS for 404 page
+----------------------------------- */
+.error-404.not-found {
+  margin: 2.618em auto;
+}
+.error-404.not-found .page-header img {
+  margin: 1.618em 0;
+}
+
+/* SCSS Nav styles
+------------------------------- */
+#menu-primary li.menu-item .navbar-form {
+  padding: 10px 0;
+  display: inline-flex;
+  flex-wrap: wrap;
+}
+#menu-primary li.menu-item .navbar-form .btn-default {
+  border: 1px solid #f5f5f5;
+  background-color: #a01624;
+  border-radius: 0;
+  color: #ccc;
+}
+#menu-primary li.menu-item .navbar-form .form-group .form-control {
+  border: 1px solid #f5f5f5;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+/** SCSS Search Results
+------------------------------------------- */
+.content-area.search-results {
+  padding: 1.618em;
+}
+
+.page-header.search-results {
+  margin-top: 2.618em;
+}
+.page-header.search-results h1 {
+  font-size: 2rem;
+}
+
+.search-logo-wrap {
+  background-color: #f5f5f5;
+  padding: 1.618em;
+  margin-bottom: 2.618em;
 }
 
 /*# sourceMappingURL=custom.css.map */
