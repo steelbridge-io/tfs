@@ -32,7 +32,7 @@ get_header(); ?>
     <!-- === JOIN NEWS LETTER === -->
     <div id="fp-well" class="well well-sm text-center no-margin-bottom">
       <div id="fp-well" class="well well-sm text-center no-margin-bottom">
-        <form class="form-inline" method="post" action="https://oi.vresp.com?fid=85819a996f" target="vr_optin_popup"  onsubmit="window.open( 'https://www.verticalresponse.com', 'vr_optin_popup', 'scrollbars=yes,width=600,height=450' ); return true">
+       <!-- <form class="form-inline" method="post" action="https://oi.vresp.com?fid=85819a996f" target="vr_optin_popup"  onsubmit="window.open( 'https://www.verticalresponse.com', 'vr_optin_popup', 'scrollbars=yes,width=600,height=450' ); return true">
           <div id="pop-over-fp" class="form-group link-color-tfs-red">
             <div>
               <label for="exampleInputEmail2"><h3>Sign Up For Our Newsletter</h3></label>
@@ -41,7 +41,26 @@ get_header(); ?>
               <button class="btn-md btn background-color-tfs-red font-color-white opacity-7"  type="submit" value="Sign Up!">Click Here To Sign Up!</button>
               <a tabindex="0" role="button" aria-hidden="true" data-trigger="hover" data-toggle="popover" data-placement="top" title="Safe Subscribe" data-content="We respect your privacy and do not tolerate spam and will never sell, rent, lease or give away your email address to any third party. Nor will we send you unsolicited email. You will have the option to safely unsubscribe upon receiving our newsletters. We just want to deleiver great photos, fantastic fly fishing ideas and motivation!"><span class="glyphicon glyphicon-question-sign gi-2x"></span></a></span>
           </div>
-        </form>
+        </form> -->
+        <!-- Begin Constant Contact Inline Form Code -->
+        <div>
+          <label for="exampleInputEmail2"><h3>Sign Up For Our Newsletter</h3></label>
+        </div>
+        <div class="row front-page-email-signup">
+          <div class="col-4">
+        <div class="ctct-inline-form form-inline" data-form-id="0ad001fb-1027-4de2-9265-5dede2414e0d"></div>
+          </div>
+          <div id="pop-over-fp" class="col-4">
+        <a tabindex="0" role="button" aria-hidden="true" data-trigger="hover" data-toggle="popover" data-placement="top" title="Safe Subscribe" data-content="We respect your privacy and do not tolerate spam and will never sell, rent, lease or give away your email address to any third party. Nor will we send you unsolicited email. You will have the option to safely unsubscribe upon receiving our newsletters. We just want to deleiver great photos, fantastic fly fishing ideas and motivation!"><span class="glyphicon glyphicon-question-sign gi-2x"></span></a></span>
+          </div>
+        </div>
+        <!-- End Constant Contact Inline Form Code -->
+  
+        <!-- Begin Constant Contact Active Forms -->
+        <script> var _ctct_m = "0a0f5b541f83f517b80813b9cfbdb8d9"; </script>
+        <script id="signupScript" src="//static.ctctcdn.com/js/signup-form-widget/current/signup-form-widget.min.js" async defer></script>
+        <!-- End Constant Contact Active Forms -->
+        
       </div>
       <div id="blog-feed-fp-top" class="container-fluid mb-1618 mt-1">
         <div class="row">
