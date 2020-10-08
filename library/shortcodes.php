@@ -4,7 +4,7 @@
 // function that runs when shortcode is called
 function tfs_search_shortcode() {
 
-// Things that you want to do.
+// Things that you want to do. Like add search to a widget using shortcode [search-code]
   $search = '<form role="search" method="get" class="navbar-form navbar-left" action="' . home_url( '/' ) . '">
               <div class="form-group">
                   <span class="screen-reader-text">' .  _x( 'Search for:', 'label' ) . '</span>
