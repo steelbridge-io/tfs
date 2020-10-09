@@ -1259,7 +1259,7 @@ input#exampleInputEmail2.form-control.removeglow {
 }
 
 .well.well-sm.text-center.no-margin-bottom {
-  padding: 1.618em;
+  padding: 1.618em 1.618em .218em;
 }
 
 input.search-submit {
@@ -2104,4 +2104,5 @@ nav.navigation.post-navigation {
 @import 'supports/404';
 @import 'supports/nav';
 @import 'supports/search-results';
+@import 'supports/forms';
 
