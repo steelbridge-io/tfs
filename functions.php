@@ -250,6 +250,56 @@ function the_fly_shop_widgets_init() {
     'before_title'  => '<h2 class="widget-title">',
     'after_title'   => '</h2>',
   ) );
+  
+  register_sidebar( array(
+    'name'          => esc_html__( 'Sidebar ESB Lodge', 'the-fly-shop' ),
+    'id'            => 'sidebar-5',
+    'description'   => esc_html__( 'Add widgets here.', 'the-fly-shop' ),
+    'before_widget' => '<section id="%1$s" class="widget %2$s">',
+    'after_widget'  => '</section>',
+    'before_title'  => '<h2 class="widget-title">',
+    'after_title'   => '</h2>',
+  ) );
+  
+  register_sidebar( array(
+    'name'          => esc_html__( 'Sidebar Lava Creek Lodge', 'the-fly-shop' ),
+    'id'            => 'sidebar-6',
+    'description'   => esc_html__( 'Add widgets here.', 'the-fly-shop' ),
+    'before_widget' => '<section id="%1$s" class="widget %2$s">',
+    'after_widget'  => '</section>',
+    'before_title'  => '<h2 class="widget-title">',
+    'after_title'   => '</h2>',
+  ) );
+  
+  register_sidebar( array(
+    'name'          => esc_html__( 'Sidebar Retail', 'the-fly-shop' ),
+    'id'            => 'sidebar-7',
+    'description'   => esc_html__( 'Add widgets here.', 'the-fly-shop' ),
+    'before_widget' => '<section id="%1$s" class="widget %2$s">',
+    'after_widget'  => '</section>',
+    'before_title'  => '<h2 class="widget-title">',
+    'after_title'   => '</h2>',
+  ) );
+  
+  register_sidebar( array(
+    'name'          => esc_html__( 'Sidebar News', 'the-fly-shop' ),
+    'id'            => 'sidebar-8',
+    'description'   => esc_html__( 'Add widgets here.', 'the-fly-shop' ),
+    'before_widget' => '<section id="%1$s" class="widget %2$s">',
+    'after_widget'  => '</section>',
+    'before_title'  => '<h2 class="widget-title">',
+    'after_title'   => '</h2>',
+  ) );
+  
+  register_sidebar( array(
+    'name'          => esc_html__( 'Sidebar Survey', 'the-fly-shop' ),
+    'id'            => 'sidebar-9',
+    'description'   => esc_html__( 'Add widgets here.', 'the-fly-shop' ),
+    'before_widget' => '<section id="%1$s" class="widget %2$s">',
+    'after_widget'  => '</section>',
+    'before_title'  => '<h2 class="widget-title">',
+    'after_title'   => '</h2>',
+  ) );
 }
 add_action( 'widgets_init', 'the_fly_shop_widgets_init' );
 
