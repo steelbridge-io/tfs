@@ -11,8 +11,14 @@ function load_travelblog_css() {
 	$travelblog_text_color		= get_theme_mod ('travelblog_text_color');
 	$travelblog_link_color		= get_theme_mod ('travelblog_link_color');
 	$travelnews_bg_color      = get_theme_mod ('travelnews_bg_color');
+  
+  $travelsig_bg_color       = get_theme_mod ('travelsig_bg_color');
+  $travelsig_text_color     = get_theme_mod ('travelsig_text_color');
+  $travelsig_link_color     = get_theme_mod ('travelsig_link_color');
 	
-	if (is_page_template('page-templates/travel-template-blog.php')) {
+	
+	
+	if (is_page_template('page-templates/travel-template-blog.php' || 'page-templates/travel-signature-template-customizer.php')) {
 		$css_travelblog .= '
 		
 		.travelblog_bg_color,
@@ -32,6 +38,17 @@ function load_travelblog_css() {
 		  background-color:' . $travelnews_bg_color . ';
 		}
 		
+		.row.travel-signature-template-row {
+		  background-color: ' . $travelsig_bg_color . ';
+		}
+		.caption.sig-caption h4,
+		.caption.sig-caption p,
+		.thumbnail.signature-text-color h3 {
+		  color: '. $travelsig_text_color .';
+		}
+		.caption.sig-caption p a {
+		  color: '. $travelsig_link_color .';
+		}
 		';
 	return $css_travelblog;
 	}

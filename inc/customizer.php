@@ -53,6 +53,7 @@ function the_fly_shop_customize_register( $wp_customize ) {
 	include 'customizer/survey-customizer.php';
 	include 'customizer/holiday-customizer.php';
 	include 'customizer/travel-blog-customizer.php';
+	include 'customizer/travel-signature-template-customizer.php';
 	
 	
 /**

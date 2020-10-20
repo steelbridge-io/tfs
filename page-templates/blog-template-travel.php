@@ -29,12 +29,19 @@ get_header();
                     <div class="basicpagelogo signature-header template-class text-center">
 
                         <dl class="landing-hd">
+                          
+                          <?php
+                          $blog_template_logo  = get_post_meta(get_the_ID(), 'blog-template-logo', true);
+                          if(get_post_meta($post->ID, 'blog-template-logo', true)) : ?>
+                            <dd id="travel-blog-logo" class="dd-1"><img src="<?php echo $blog_template_logo ?>" class="img-responsive-logo" alt="" title=""></dd>
+                            <?php  else:  ?>
                             <dd id="travel-blog-logo" class="dd-1"><img src="<?php echo $new_blog_logo ?>" class="img-responsive-logo" alt="" title=""></dd>
-
+                            <?php endif; ?>
                             <dd class="dd-2 travel-blog"><h2 class="logo-tel"><?php echo get_the_title(); ?></h2></dd>
-
-                            <?php if ( get_post_meta($post->ID, 'signature-description', true) )
-                                echo '<dd class="dd-3"><p class="template-description">' . $basic_page_description . '</p></dd>' ?>
+                            <?php
+                            $blog_description_new = get_post_meta(get_the_ID(), 'blog-description-new', true);
+                            if ( get_post_meta($post->ID, 'blog-description-new', true) )
+                                echo '<dd class="dd-3"><p class="template-description">' . $blog_description_new . '</p></dd>' ?>
 
                             <dd class="dd-4"><h3 class="logo-tel"><a href="tel:18006693474">800 &bull; 669 &bull; 3474</a></h3></dd>
                         </dl>

@@ -1,5 +1,10 @@
 /** SCSS for Travel Signature Template
 ----------------------------------------- */
+.row.travel-signature-template-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 #travel-signature-template {
   background-color: $black;
 

@@ -636,7 +636,7 @@ function cvf_deactive() {
 }
 
 // Redirects visitors from other countries except the US and Canada.
-add_action( 'template_redirect', 'country_redirect' );
+//add_action( 'template_redirect', 'country_redirect' );
 function country_redirect()
 {
   $country = file_get_contents("https://api.db-ip.com/v2/2497b5bdbfa4553039fb2c22dc36c79885e9c0e2/{$_SERVER['REMOTE_ADDR']}/countryCode");
