@@ -27,10 +27,12 @@ get_header();
       <div class="center-content-flex template-header-content">
         <div class="basicpagelogo signature-header template-class text-center">
           <dl class="landing-hd">
-            <?php if($outftter_blog_logo !== '') { ?>
-            <dd class="dd-1"><img src="<?php echo $outftter_post_default; ?>" class="img-responsive-logo" alt="" title=""></dd>
-            <?php } else { ?>
+            <?php if($outfitters_logo_meta !== '') { ?>
+            <dd class="dd-1"><img src="<?php echo $outfitters_logo_meta; ?>" class="img-responsive-logo" alt="" title=""></dd>
+            <?php } elseif($outftter_blog_logo !== '') { ?>
             <dd class="dd-1"><img src="<?php echo $outftter_blog_logo; ?>" class="img-responsive-logo" alt="" title=""></dd>
+            <?php } else { ?>
+            <dd class="dd-1"><img src="<?php echo $outftter_post_default; ?>" class="img-responsive-logo" alt="" title=""></dd>
             <?php } ?>
             <dd class="dd-2"><h2 class="logo-tel"><?php echo get_the_title(); ?></h2></dd>
             <?php if ( get_post_meta($post->ID, 'signature-description', true) )
@@ -110,7 +112,10 @@ get_header();
         </main>
         
         <div class="col-md-4">
-          <?php get_sidebar('outfitter'); ?>
+          <?php
+          $selectsidebar = get_post_meta(get_the_ID(), 'outfitters-select-sidebar', true);
+          get_sidebar($selectsidebar);
+          //get_sidebar('outfitter'); ?>
         </div>
       </div>
     </div>

@@ -16,3 +16,5 @@ $basic_page_description_new = get_post_meta(get_the_ID(), 'blog-description-new'
 $blog_cta_title_new         = get_post_meta(get_the_ID(), 'blog-cta-title-new', true);
 $blog_cta_content_new       = get_post_meta(get_the_ID(), 'blog-cta-content-new', true);
 
+$outfitters_logo_meta       = get_post_meta(get_the_ID(), 'outfitters-logo', true);
+

@@ -117,7 +117,9 @@ get_header();
                 </main>
 
                 <div class="col-md-4">
-                  <?php get_sidebar('travel'); ?>
+                  <?php
+                  $selectsidebar =  get_post_meta(get_the_ID(), 'select-sidebar', true);
+                  get_sidebar($selectsidebar); ?>
                 </div>
             </div>
         </div>
