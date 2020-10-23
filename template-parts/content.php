@@ -36,15 +36,21 @@
 		<div id="default-entry-styles" class="entry-content content-part">
           
           <a href="<?php echo get_the_permalink($post->ID); ?>" title="<?php echo get_the_title($post->ID); ?>">
-            <h2 class="content-title"><?php echo get_the_title(); ?></h2>
+            <h2 class="content-title"><?php echo the_title(); ?></h2>
           </a>
           <p><b>Published:&nbsp;<?php echo get_the_date( 'F j, Y' ); ?></b></p>
 			<?php
-				the_excerpt( sprintf(
-					/* translators: %s: Name of current post. */
+            
+                echo '<div class="card default-template">'.
+                      '<div class="card-body">' .
+                          the_content() .
+                      '</div>
+                      </div>';
+				/*the_excerpt( sprintf(
+					
 					wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'the-fly-shop' ), array( 'span' => array( 'class' => array() ) ) ),
 					the_title( '<span class="screen-reader-text">"', '"</span>', false )
-				) );
+				) );*/
 
 				wp_link_pages( array(
 					'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'the-fly-shop' ),
