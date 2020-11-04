@@ -705,3 +705,42 @@ function prefix_conditional_body_class( $classes ) {
   return $classes;
 }
 add_filter( 'body_class', 'prefix_conditional_body_class' );
+
+
+function allow_post_tags( $allowedposttags ){
+  
+  $allowedposttags['div'] = array(
+      
+      'style' => true,
+      ';'     => true,
+  );
+  
+  $allowedposttags['iframe'] = array(
+    
+    'src' => true,
+    
+    'style' => true,
+    
+    'allow' => true,
+    
+    'width' => true,
+    
+    'height' => true,
+    
+    'class' => true,
+    
+    'frameborder' => true,
+    
+    'webkitAllowFullScreen' => true,
+    
+    'mozallowfullscreen' => true,
+    
+    'allowFullScreen' => true
+  
+  );
+  
+  return $allowedposttags;
+  
+}
+
+add_filter('wp_kses_allowed_html','allow_post_tags', 1);

@@ -2446,6 +2446,11 @@ h2.content-title {
   margin-bottom: 0.5em;
 }
 
+.iframe-center {
+  margin: 1.618em auto;
+  display: block;
+}
+
 /* SCSS Margins Padding
 -------------------------------- */
 .mt-1618 {
