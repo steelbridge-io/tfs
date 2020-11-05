@@ -706,7 +706,7 @@ function prefix_conditional_body_class( $classes ) {
 }
 add_filter( 'body_class', 'prefix_conditional_body_class' );
 
-
+/// Resolves issue with admin and other roles not being able to add <iFrame>
 function allow_post_tags( $allowedposttags ){
   
   $allowedposttags['div'] = array(
