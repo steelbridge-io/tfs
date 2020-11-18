@@ -55,11 +55,11 @@ $tfs_metatags    = get_post_meta(get_the_ID(), 'seotfs-meta-tags', true);
 <div class="container-fluid">
   
   <!-- Facebook Feed -->
-  <div id="fb-root"></div>
+ <!--<div id="fb-root"></div>-->
   
   <script>
     //FACEBOOK JAVASCRIPT SDK
-    (function(d, s, id) {
+ /*   (function(d, s, id) {
 
          var js, fjs = d.getElementsByTagName(s)[0];
          if (d.getElementById(id)) return;
@@ -69,7 +69,7 @@ $tfs_metatags    = get_post_meta(get_the_ID(), 'seotfs-meta-tags', true);
 
        }
        (document, 'script', 'facebook-jssdk')
-    );
+    );*/
   </script>
   
   <script>
