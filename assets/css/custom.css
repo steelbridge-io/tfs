@@ -2614,4 +2614,40 @@ div.ctct-form-embed form.ctct-form-custom label.ctct-form-label {
   width: 100%;
 }
 
+/** SCSS Tools
+=============================== */
+.left-align {
+  float: left;
+  padding: 0 15px 0 0;
+}
+
+.right-align {
+  float: right;
+  padding: 0 0 0 15px;
+}
+
+.center-align {
+  float: none;
+  max-width: 100%;
+  margin: 0 auto;
+  display: block;
+}
+
+@media (max-width: 767.98px) {
+  .left-align {
+    padding: 1em 0;
+    margin: 0 auto;
+    width: 100%;
+    display: block;
+    float: none;
+  }
+
+  .right-align {
+    padding: 1em 0;
+    margin: 0 auto;
+    width: 100%;
+    display: block;
+  }
+}
+
 /*# sourceMappingURL=custom.css.map */
