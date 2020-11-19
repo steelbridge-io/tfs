@@ -211,11 +211,44 @@
 
       </div>
       <div class="col-md-4">
-        <!-- ==== FACEBOOK FEED === -->
-        <h2 class="mt-1618"></h2>
+        <h2 class="mt-1618">NEWS</h2>
 
         <div class="mt-05">
-        
+          <?php
+          $args = array(
+            'posts_per_page'  => '3',
+            'post_type' => 'post',
+            'category_name' => 'Footer'
+          );
+          $query = new WP_Query( $args );
+  
+          // The Loop
+          if ( $query->have_posts() ) {
+            echo '<div id="blog-feed-footer">';
+            while ( $query->have_posts() ) {
+      
+              $query->the_post();
+      
+              $featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'full'); ?>
+              <h3><?php echo get_the_title(); ?></h3>
+              <div class="well">
+                <div class="row">
+                  <div class="col-md-12">
+                    <img class="img-responsive" src="<?php echo $featured_img_url; ?>" alt="">
+                  </div>
+                  <div class="col-md-12"><?php echo the_excerpt(); ?></div>
+                </div>
+              </div>
+    
+            <?php }
+            echo '</div>';
+          } else {
+            // no posts found
+          }
+  
+          wp_reset_postdata();
+  
+          ?>
         </div>
 
       </div>
