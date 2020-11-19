@@ -1,5 +1,70 @@
 /** SCSS Tools
+
+- buttons
+- padding and margins
+
 =============================== */
+.grecaptcha-badge { visibility: hidden; }
+
+/* buttons *********/
+
+  .tfs-btn {
+    padding: 0.8em 1.1em;
+    border-radius: 0;
+    border: none;
+  }
+
+  .tfs-btn-grey {
+    background-color: $btn-grey;
+    font-size: 1.7rem;
+    font-weight: 900;
+    color: $white;
+
+    &:hover {
+      text-decoration: none;
+      color: $white;
+    }
+  }
+
+  .tfs-btn-dark {
+    background-color: $tfsdark;
+    font-size: 1.7rem;
+    font-weight: 900;
+    color: $white;
+
+    &:hover {
+      text-decoration: none;
+      color: $white;
+    }
+  }
+
+  .tfs-btn-red {
+    background-color: $logored;
+    font-size: 1.7rem;
+    font-weight: 900;
+    color: $white;
+
+    &:hover {
+      text-decoration: none;
+      color: $white;
+    }
+  }
+
+  .tfs-btn-orange {
+    background-color: $tfsorange;
+    font-size: 1.7rem;
+    font-weight: 900;
+    color: $white;
+
+    &:hover {
+      text-decoration: none;
+      color: $white;
+    }
+  }
+
+
+
+/* padding and margins ********/
 .pt-05 {
   paddiing-top: 0.8em
 }
