@@ -113,12 +113,11 @@
 		</div>
   <div class="col-md-4">
     <!-- ==== FACEBOOK FEED === -->
-   <!-- <h2 class="mt-1618">FACEBOOK FEED</h2>
-     <div class="mt-05">
-     <div class="fb-page" data-href="https://www.facebook.com/The-Fly-Shop-111446768893973/" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false">
-      <blockquote cite="https://www.facebook.com/The-Fly-Shop-111446768893973/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/The-Fly-Shop-111446768893973/">The Fly Shop</a></blockquote>
-     </div>
-   </div> -->
+    <h2 class="mt-1618"></h2>
+    <div class="mt-05">
+    
+    </div>
+    
  </div>
 </div>
 </div>

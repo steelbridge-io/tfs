@@ -52,25 +52,11 @@ $tfs_metatags    = get_post_meta(get_the_ID(), 'seotfs-meta-tags', true);
 <!--<body class="landing">-->
 
 <?php echo '<body class="scroll landing archivetemplate stream-report travel-destination outfitters-dept private-waters schools-template fish-camp-template default-template non-banner-loading '.join(' ', get_body_class()).'">'.PHP_EOL; ?>
+
+<div id="fb-root"></div>
+
+
 <div class="container-fluid">
-  
-  <!-- Facebook Feed -->
- <!--<div id="fb-root"></div>-->
-  
-  <script>
-    //FACEBOOK JAVASCRIPT SDK
- /*   (function(d, s, id) {
-
-         var js, fjs = d.getElementsByTagName(s)[0];
-         if (d.getElementById(id)) return;
-         js = d.createElement(s); js.id = id;
-         js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.7&appId=1556606617893042";
-         fjs.parentNode.insertBefore(js, fjs);
-
-       }
-       (document, 'script', 'facebook-jssdk')
-    );*/
-  </script>
   
   <script>
     // Handles the pop-over feature found on stream report.
