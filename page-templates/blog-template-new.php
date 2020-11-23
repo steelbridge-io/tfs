@@ -118,7 +118,10 @@ get_header();
           </div>
         <?php } else { ?>
         <div class="col-md-4">
-          <?php get_sidebar(); ?>
+          <?php
+            $selectsidebar_blogNew = get_post_meta(get_the_ID(), 'select-sidebar', true);
+            get_sidebar($selectsidebar_blogNew); ?>
+        </div>
         </div>
         <?php } ?>
       </div>

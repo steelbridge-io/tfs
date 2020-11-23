@@ -112,7 +112,10 @@ get_header();
         
         </main>
         <div class="col-md-4">
-          <?php get_sidebar(); ?>
+          <?php
+            $selectsidebar_blogContactus =  get_post_meta(get_the_ID(), 'select-sidebar', true);
+            get_sidebar($selectsidebar_blogContactus); ?>
+        </div>
         </div>
       </div>
     </div>

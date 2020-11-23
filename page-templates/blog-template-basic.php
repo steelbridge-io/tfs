@@ -142,9 +142,10 @@ get_header();
             ?>
         
         </main>
-        
         <div class="basic-blog-temp-sidebar col-md-3 col-sm-offset-1">
-          <?php get_sidebar(); ?>
+          <?php
+            $selectsidebar_blogBasic =  get_post_meta(get_the_ID(), 'select-sidebar', true);
+            get_sidebar($selectsidebar_blogBasic); ?>
         </div>
       </div>
     </div>
