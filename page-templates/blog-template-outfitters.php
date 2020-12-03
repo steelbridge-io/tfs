@@ -22,24 +22,28 @@ get_header();
   
   <div class="outer">
   <div class="inner">
-    <div id="image" data-0="background-size: 150% auto; opacity:1;" data-380="background-size: 200% auto; top:0;" data-581="opacity:0; top=401;">
+    <?php
+      $jumbotronImage_Outfitters = get_the_post_thumbnail_url($post->ID, 'full');
       
-      <div class="center-content-flex template-header-content">
-        <div class="basicpagelogo signature-header template-class text-center">
-          <dl class="landing-hd">
-            <?php if($outfitters_logo_meta !== '') { ?>
+    ?>
+    <div id="outfitters-jumbotron" class="jumbotron">
+      <img class="img-responsive" src="<?php echo $jumbotronImage_Outfitters ?>" alt="">
+      <div class="container">
+  
+        <dl class="landing-hd">
+          <?php if($outfitters_logo_meta !== '') { ?>
             <dd class="dd-1"><img src="<?php echo $outfitters_logo_meta; ?>" class="img-responsive-logo" alt="" title=""></dd>
-            <?php } elseif($outftter_blog_logo !== '') { ?>
+          <?php } elseif($outftter_blog_logo !== '') { ?>
             <dd class="dd-1"><img src="<?php echo $outftter_blog_logo; ?>" class="img-responsive-logo" alt="" title=""></dd>
-            <?php } else { ?>
+          <?php } else { ?>
             <dd class="dd-1"><img src="<?php echo $outftter_post_default; ?>" class="img-responsive-logo" alt="" title=""></dd>
-            <?php } ?>
-            <dd class="dd-2"><h2 class="logo-tel"><?php echo get_the_title(); ?></h2></dd>
-            <?php if ( get_post_meta($post->ID, 'signature-description', true) )
-              echo '<dd class="dd-3"><p class="template-description">' . $basic_page_description . '</p></dd>' ?>
-            <dd class="dd-4"><h3 class="logo-tel"><a href="tel:18006693474">800 &bull; 669 &bull; 3474</a></h3></dd>
-          </dl>
-        </div>
+          <?php } ?>
+          <dd class="dd-2"><h2 class="logo-tel"><?php echo get_the_title(); ?></h2></dd>
+          <?php if ( get_post_meta($post->ID, 'signature-description', true) )
+            echo '<dd class="dd-3"><p class="template-description">' . $basic_page_description . '</p></dd>' ?>
+          <dd class="dd-4"><h3 class="logo-tel"><a href="tel:18006693474">800 &bull; 669 &bull; 3474</a></h3></dd>
+        </dl>
+       
       </div>
     </div>
   </div>
