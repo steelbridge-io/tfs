@@ -313,8 +313,6 @@ function load_dashicons_front_end() {
 
 function the_fly_shop_scripts() {
   
-    wp_enqueue_style( 'the-fly-shop-custom-style', get_template_directory_uri() . '/assets/css/custom.css', array(), '20161116', 'all' );
-  
     wp_enqueue_style( 'the-fly-shop-btstrp-template', get_template_directory_uri() . '/assets/css/bootstrap.css', array(), '3.3.7', 'all' );
 
     wp_register_style( 'dashicons-tfs', get_template_directory_uri(). '/assets/css/dashicons.min.css');
@@ -330,9 +328,9 @@ function the_fly_shop_scripts() {
 
     wp_enqueue_style( 'the-fly-shop-ie8', get_template_directory_uri() . '/assets/css/ie8.css', array(), '20161116', 'all' );
 
-    wp_enqueue_style( 'the-fly-shop-main-style', get_template_directory_uri() . '/assets/sass/main.css', array(),  '20161116', 'all' );
+    wp_enqueue_style( 'the-fly-shop-main-style', get_template_directory_uri() . '/assets/css/sass/main.css', array(),  '20161116', 'all' );
 
-    //wp_enqueue_style( 'the-fly-shop-custom-style', get_template_directory_uri() . '/assets/css/custom.css', array(), '20161116', 'all' );
+    wp_enqueue_style( 'the-fly-shop-custom-style', get_template_directory_uri() . '/assets/css/custom.css', array(), '20161116', 'all' );
     
     wp_enqueue_style( 'aos-animation-css', get_template_directory_uri() . '/aos-animations/aos/dist/aos.css', array(), '20200415', 'all');
   
