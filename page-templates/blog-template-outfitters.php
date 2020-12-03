@@ -26,8 +26,8 @@ get_header();
       $jumbotronImage_Outfitters = get_the_post_thumbnail_url($post->ID, 'full');
       
     ?>
-    <div id="outfitters-jumbotron" class="jumbotron">
-      <img class="img-responsive" src="<?php echo $jumbotronImage_Outfitters ?>" alt="">
+    <div id="outfitters-jumbotron" class="outfitters jumbotron">
+      <img class="img-responsive outfitters" src="<?php echo $jumbotronImage_Outfitters ?>" alt="">
       <div class="container">
   
         <dl class="landing-hd">
@@ -38,10 +38,10 @@ get_header();
           <?php } else { ?>
             <dd class="dd-1"><img src="<?php echo $outftter_post_default; ?>" class="img-responsive-logo" alt="" title=""></dd>
           <?php } ?>
-          <dd class="dd-2"><h2 class="logo-tel"><?php echo get_the_title(); ?></h2></dd>
+          <dd class="dd-2"><h2 class="logo-tel text-center outfitters"><?php echo get_the_title(); ?></h2></dd>
           <?php if ( get_post_meta($post->ID, 'signature-description', true) )
-            echo '<dd class="dd-3"><p class="template-description">' . $basic_page_description . '</p></dd>' ?>
-          <dd class="dd-4"><h3 class="logo-tel"><a href="tel:18006693474">800 &bull; 669 &bull; 3474</a></h3></dd>
+            echo '<dd class="dd-3"><p class="template-description text-center outfitters">' . $basic_page_description . '</p></dd>' ?>
+          <dd class="dd-4"><h3 class="logo-tel text-center outfitters"><a href="tel:18006693474">800 &bull; 669 &bull; 3474</a></h3></dd>
         </dl>
        
       </div>
