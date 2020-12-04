@@ -3,3 +3,43 @@
 .wrapper-blog {
   margin-top: 3.618em;
 }
+
+#outfitters-jumbotron.outfitters.jumbotron {
+  padding: 0 !important;
+  img.outfitters {
+    position: relative;
+    z-index: 2;
+    padding: 0;
+
+  }
+  .container {
+    position: absolute;
+    z-index: 3;
+    top: 30%;
+    left: 10%;
+    right: 10%;
+    transition: 0.5s;
+    .landing-hd {
+      .dd-2 {
+        .logo-tel {
+          font-size: calc(16px + (24 - 16) * (100vw - 400px)/(800 - 400));
+        }
+      }
+      .dd-4 {
+        .logo-tel {
+          font-size: calc(16px + (18 - 16) * (100vw - 300px)/(800 - 400));
+        }
+      }
+    }
+  }
+}
+#outfitters-jumbotron:after {
+  content: "";
+  background: rgba(0,0,0,0.2);
+  position: absolute;
+  z-index: 2;
+  display: block;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+}

@@ -5390,29 +5390,6 @@ a.badge:hover, a.badge:focus {
   cursor: pointer;
 }
 
-#outfitters-jumbotron.outfitters.jumbotron {
-  padding: 0 !important;
-}
-#outfitters-jumbotron.outfitters.jumbotron img.outfitters {
-  position: relative;
-  z-index: 1;
-  padding: 0;
-}
-#outfitters-jumbotron.outfitters.jumbotron .container {
-  position: absolute;
-  z-index: 2;
-  top: 30%;
-  left: 10%;
-  right: 10%;
-  transition: 0.5s;
-}
-#outfitters-jumbotron.outfitters.jumbotron .container .landing-hd .dd-2 .logo-tel {
-  font-size: calc(16px + (24 - 16) * (100vw - 400px)/(800 - 400));
-}
-#outfitters-jumbotron.outfitters.jumbotron .container .landing-hd .dd-4 .logo-tel {
-  font-size: calc(16px + (18 - 16) * (100vw - 300px)/(800 - 400));
-}
-
 .jumbotron {
   padding-top: 30px;
   padding-bottom: 30px;

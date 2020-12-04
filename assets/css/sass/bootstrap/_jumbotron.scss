@@ -1,37 +1,6 @@
 //
 // Jumbotron
 // --------------------------------------------------
-
-#outfitters-jumbotron.outfitters.jumbotron {
-  padding: 0 !important;
-  img.outfitters {
-    position: relative;
-    z-index: 1;
-    padding: 0;
-
-  }
-  .container {
-    position: absolute;
-    z-index: 2;
-    top: 30%;
-    left: 10%;
-    right: 10%;
-    transition: 0.5s;
-    .landing-hd {
-      .dd-2 {
-        .logo-tel {
-          font-size: calc(16px + (24 - 16) * (100vw - 400px)/(800 - 400));
-        }
-      }
-      .dd-4 {
-        .logo-tel {
-          font-size: calc(16px + (18 - 16) * (100vw - 300px)/(800 - 400));
-        }
-      }
-    }
-  }
-}
-
 .jumbotron {
   padding-top:    $jumbotron-padding;
   padding-bottom: $jumbotron-padding;
