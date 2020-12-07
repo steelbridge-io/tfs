@@ -2308,6 +2308,10 @@ nav.navigation.post-navigation .polls.nav-previous .fa-chevron-left {
 #outfitters-jumbotron.outfitters.jumbotron {
   padding: 0 !important;
 }
+#outfitters-jumbotron.outfitters.jumbotron .img-responsive.outfitters {
+  max-width: none;
+  width: 100%;
+}
 #outfitters-jumbotron.outfitters.jumbotron img.outfitters {
   position: relative;
   z-index: 2;
