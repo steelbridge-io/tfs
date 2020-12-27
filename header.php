@@ -155,3 +155,11 @@ $tfs_metatags    = get_post_meta(get_the_ID(), 'seotfs-meta-tags', true);
                                 </nav>
                               
                               </header>
+                              
+                              
+                              <?php if (is_page_template('page-templates/news-blog-template.php')) {
+                                
+                                      echo  '<div class="container-fluid news-logo">' .
+                                            '<img src="https://tfs-spaces.sfo2.digitaloceanspaces.com/theflyshop/uploads/2018/01/TFSLogo-red.png" alt="The Fly Shop">' .
+                                            '</div>';
+                                    } ?>

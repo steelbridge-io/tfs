@@ -1,15 +1,83 @@
 /** News Blog Template
 ========================== */
+.container-fluid.news-logo {
+  img {
+    margin: 2.618em ;
+  }
+}
+
+#news-header {
+  h1 {
+    font-size: 2rem;
+  }
+  margin: 3.618em auto;
+  .row {
+    height: 400px;
+  }
+  .featured-news-image {
+    height: 100%;
+    .img-responsive.news-featured-image {
+      width: 100%;
+      object-fit: cover;
+      height: 100%;
+    }
+  }
+}
+
+.container-fluid.featured-post {
+  padding-left: 35px;
+  padding-right: 35px;
+}
+
+#news-blog-template {
+  padding-bottom: 5.618em !important;
+  .the-author {
+    margin-right: 1.618em;
+  }
+  .panel.panel-default {
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    margin-bottom: 0;
+    h2 {
+      font-size: 1rem;
+    }
+    h3 {
+      font-size: 2.2rem;
+    }
+  }
+  .panel-body {
+    background-color: transparent;
+    border: none;
+    padding: 0 15px;
+    .row {
+      margin-top: 5.618em;
+      display: flex;
+      align-items: center;
+    }
+  }
+  .col-6 {
+    width: 48%;
+    display: inline-block;
+    padding-left: 15px;
+    padding-right: 15px;
+    p {
+      margin-bottom: 0;
+    }
+  }
+}
+
+
 /** News Template **/
 .page-template-news-blog-template {
-  .container-fluid {
+  .container-fluid.blog-posts {
     margin: 0 !important;
     padding-left: 0 !important;
     padding-right: 0 !important;
   }
   #news-blog-template {
     h2,h3,p {
-      color: #f5f5f5;
+      color: $tfs_dark;
     }
     .container-fluid {
       margin-left: -15px;
@@ -30,6 +98,33 @@
 }
 #news-blog-template.container-fluid {
   padding: 0;
-  background-color: var(--default-darkbg);
+  background-color: $white;
 }
+
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px) {
+  #news-header {
+    margin: 3.618em auto;
+    .row {
+      height: auto;
+    }
+    .featured-news-image {
+      height: auto;
+      .img-responsive.news-featured-image {
+        width: 100%;
+        object-fit: initial;
+        height: auto;
+      }
+    }
+  }
+}
+
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) {}
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) {}
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {}
 

@@ -578,15 +578,28 @@ add_filter('excerpt_more', 'new_excerpt_more');
 add_filter( 'excerpt_length', 'tfs_custom_excerpt_length', 999 );*/
 
 
-add_filter( 'excerpt_length', 'custom_excerpt_length' );
+//add_filter( 'excerpt_length', 'custom_excerpt_length' );
 
-function custom_excerpt_length( $length ) {
-  
-  $length = in_category('blog') ? '20' : '20';
-  
-  return $length;
-  
-}
+/*function custom_excerpt_length( $length ) {
+	
+		$length = in_category( 'blog' ) ? '20' : '20';
+	
+		return $length;
+}*/
+	
+	
+	
+	function wpdocs_custom_excerpt_length( $length ) {
+		if ( is_page_template( 'page-templates/news-blog-template.php' ) ) {
+			return 50;
+		} else if ( !is_page_template('page-templates/news-blog-template.php') ) {
+			return 20;
+		} else {
+			return $length;
+		}
+	}
+	
+	add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
 
 // Adds .html to pages
 add_action('init', 'html_page_permalink', -1);
