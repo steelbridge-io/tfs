@@ -2362,6 +2362,9 @@ nav.navigation.post-navigation .polls.nav-previous .fa-chevron-left {
 #news-blog-template {
   padding-bottom: 5.618em !important;
 }
+#news-blog-template .well {
+  margin-top: 1.618em;
+}
 #news-blog-template .the-author {
   margin-right: 1.618em;
 }
@@ -2375,7 +2378,7 @@ nav.navigation.post-navigation .polls.nav-previous .fa-chevron-left {
   font-size: 1rem;
 }
 #news-blog-template .panel.panel-default h3 {
-  font-size: 2.2rem;
+  font-size: 1.8rem;
 }
 #news-blog-template .panel-body {
   background-color: transparent;
@@ -2384,7 +2387,6 @@ nav.navigation.post-navigation .polls.nav-previous .fa-chevron-left {
 }
 #news-blog-template .panel-body .row {
   margin-top: 5.618em;
-  display: flex;
   align-items: center;
 }
 #news-blog-template .col-6 {
@@ -2395,6 +2397,9 @@ nav.navigation.post-navigation .polls.nav-previous .fa-chevron-left {
 }
 #news-blog-template .col-6 p {
   margin-bottom: 0;
+}
+#news-blog-template .col-6 p.author-date {
+  margin: 0 0 1em 0;
 }
 
 /** News Template **/
@@ -2412,8 +2417,7 @@ nav.navigation.post-navigation .polls.nav-previous .fa-chevron-left {
   padding: 0;
 }
 .page-template-news-blog-template #news-blog-template img.img-responsive {
-  height: 281px;
-  max-height: 281px;
+  height: 438px;
   width: 100%;
   object-fit: cover;
 }
@@ -2425,6 +2429,17 @@ nav.navigation.post-navigation .polls.nav-previous .fa-chevron-left {
 #news-blog-template.container-fluid {
   padding: 0;
   background-color: #f5f5f5;
+}
+
+.more-btn.row {
+  margin: 0 0 0 0 !important;
+}
+.more-btn.row button {
+  width: 100%;
+}
+.more-btn.row .col-lg-12 {
+  margin: 1.618em 0 0;
+  padding: 0;
 }
 
 @media (max-width: 1199.98px) {
@@ -2714,6 +2729,31 @@ div.ctct-form-embed div.ctct-form-defaults {
 
 div.ctct-form-embed form.ctct-form-custom label.ctct-form-label {
   margin-bottom: 10px !important;
+}
+
+/** SCSS Global Properties
+=========================== */
+.btn-dark {
+  background-color: #2b343d;
+  border: #2b343d;
+  color: #f5f5f5;
+}
+.btn-dark:hover {
+  color: #f5f5f5;
+}
+.btn-dark:focus {
+  color: #f5f5f5;
+  outline: none;
+}
+.btn-dark:active {
+  outline: none;
+}
+
+.btn:active {
+  outline: none !important;
+}
+.btn:focus {
+  outline: none !important;
 }
 
 /*# sourceMappingURL=custom.css.map */

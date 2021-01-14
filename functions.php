@@ -591,7 +591,7 @@ add_filter( 'excerpt_length', 'tfs_custom_excerpt_length', 999 );*/
 	
 	function wpdocs_custom_excerpt_length( $length ) {
 		if ( is_page_template( 'page-templates/news-blog-template.php' ) ) {
-			return 50;
+			return 30;
 		} else if ( !is_page_template('page-templates/news-blog-template.php') ) {
 			return 20;
 		} else {

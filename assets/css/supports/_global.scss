@@ -1,0 +1,27 @@
+/** SCSS Global Properties
+=========================== */
+
+.btn-dark {
+  background-color: $tfs_dark;
+  border: $tfs_dark;
+  color: $lightgrey;
+  &:hover {
+    color: $lightgrey;
+  }
+  &:focus {
+    color:$lightgrey;
+    outline: none;
+  }
+  &:active {
+    outline: none;
+  }
+}
+
+.btn {
+  &:active {
+    outline: none !important;
+  }
+  &:focus {
+    outline: none !important;
+  }
+}
